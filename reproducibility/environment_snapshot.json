@@ -1,0 +1,12 @@
+{
+  "scope": "observed local environment at repository preparation; not independently established for every past experiment",
+  "versions": {
+    "joblib": "1.6.0",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.18.1",
+    "threadpoolctl": "3.6.0",
+    "numpy": "2.3.5",
+    "python": "3.12.14"
+  },
+  "verification": "stdlib-only integrity checks"
+}

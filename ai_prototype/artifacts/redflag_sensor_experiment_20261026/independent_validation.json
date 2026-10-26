@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "rechecked_prediction_rows": 1382400,
+  "subject_split": true,
+  "identical_heldout_samples": true,
+  "disposition_recalculated": true,
+  "validation_threshold_FPR_cap": true,
+  "protected_files_unchanged": true
+}

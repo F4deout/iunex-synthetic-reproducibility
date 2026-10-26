@@ -1,0 +1,10 @@
+* -text
+# Preserve the bytes of historical lock inputs and frozen Python/config files.
+ai_prototype/** -text
+*.csv -text
+*.sha256 -text
+*.json -text
+*.txt -text
+README.md text eol=lf
+docs/** text eol=lf
+tools/** text eol=lf

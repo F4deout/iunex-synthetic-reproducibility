@@ -1,0 +1,31 @@
+{
+  "name": "Simulator v2.1-running Phase 1 history experiment",
+  "date": "2026-09-21",
+  "status": "frozen before five-seed Phase 1 execution",
+  "seed_provenance": "User approved reuse of the five seeds frozen for v2 Phase 1 (SIMULATOR_V2_PHASE1_FREEZE.json); v2.1 dry-run seed 20260921 remains preserved separately",
+  "seeds": [110, 220, 330, 440, 550],
+  "k": [0, 1, 3, 5, 10, 20],
+  "alpha_grid": [1.0, 10.0, 100.0],
+  "model": "Ridge with train-only median imputation/standardization; alpha selected by validation MAE and refit on train+validation; ID-test used only after selection",
+  "targets": ["WEAK", "BASE", "STRONG", "fatigue", "condition"],
+  "observed_features": ["speed_kmh", "duration_minutes", "observed_hr", "gap_h", "history_n", "history_hr_mean", "history_speed_mean", "history_hr_slope", "history_hr_sd"],
+  "history_recovery_features": ["history_n", "history_hr_mean", "history_speed_mean", "history_hr_slope", "history_hr_sd"],
+  "parameter_recovery": "Audit-only unbounded Ridge; one E1-time history row per subject, no current E sensor or target; validation RMSE selects alpha; train+validation refit; held-out subject ID-test",
+  "controlled_prediction_cells": ["E1", "E2", "E3"],
+  "controlled_tolerance_audit_cell": "E4",
+  "naturalistic_prediction_support": "completed evaluation sessions only; no supra-threshold generalization claim",
+  "ci_method": "two-sided Student t across five independent seed-level results, df=4",
+  "ci_t_df4": 2.7764451051977987,
+  "paired_difference": "same seed and same ID-test subject/session; positive k0 MAE minus k MAE means history improves",
+  "frozen_hashes": {
+    "SIMULATOR_V21_RUNNING_PROTOCOL.md": "4594babf1e5cef0fc69a2879d7bb5b0a374bfde4abefd1661f4de9fb87aba129",
+    "SIMULATOR_V21_RUNNING_PARAMETERS.md": "be7eed3eae78a3a2e56fa3e07ee7101afa5780ba753b13bde0ba28f07bb99823",
+    "SIMULATOR_V21_RUNNING_PARAMETERS_AMENDMENT_01.md": "1e135e799dd3b776838b78b26b160fdc43d380878287899b99d8fd345cf21540",
+    "SIMULATOR_V21_RUNNING_DATASET_PROTOCOL.md": "21c95ca62f4bb98f0ef93671fa68d506d7aa6dd7983c856dfc70039a05574100",
+    "SIMULATOR_V21_RUNNING_EVALUATION_AMENDMENT_01.md": "9f86e0db6e1f6bf04083f673967ee31f6b017560a4ac4a15bbfe66ede67c06f7",
+    "simulator_v21_running.py": "d03b854edb53fa95955d440c58c71bf3e7a158c3104753841f073a20046cf586",
+    "build_v21_running_datasets.py": "353505e9741f0ccf713c24389132e066733b052778bdb1097e626158f41c9f9b",
+    "validate_simulator_v21_running.py": "7db136a5ea8d0b3b1c9f12cd7b9ebde611a9aa0eab610271daf36126bd9a7a88",
+    "run_v21_phase1_history.py": "bd0fa441da03c48580bae80e8e861935401cce839366f211db2ea218e5ce5adb"
+  }
+}

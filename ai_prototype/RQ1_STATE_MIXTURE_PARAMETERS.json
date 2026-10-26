@@ -1,0 +1,61 @@
+{
+  "version": "rq1-state-mixture-v1.1",
+  "seed": 20261001,
+  "n_subjects": 120,
+  "sessions_per_subject": 50,
+  "split_subjects": {"train": 72, "validation": 24, "test": 24},
+  "class_mix": {"negative": 0.50, "review": 0.30, "urgent": 0.20},
+  "scenario_weights": {
+    "healthy_rest": 0.20,
+    "normal_post_activity": 0.20,
+    "artifact_only": 0.10,
+    "incomplete_recovery": 0.08,
+    "febrile": 0.07,
+    "hypoxemia_moderate": 0.07,
+    "resting_tachycardia": 0.04,
+    "resting_bradycardia": 0.04,
+    "severe_heat": 0.05,
+    "hypothermic": 0.04,
+    "hypoxemia_severe": 0.06,
+    "combined_abnormality": 0.05
+  },
+  "target_weights": {
+    "condition_loss": {
+      "components": {"thermal": 0.25, "oxygen": 0.30, "cardio": 0.20, "exertion": 0.08, "recovery": 0.12, "unobserved": 0.05},
+      "dominant_components": ["thermal", "oxygen", "cardio"],
+      "dominant_fraction": 0.65,
+      "score_scale": 9.0
+    },
+    "fatigue": {
+      "components": {"thermal": 0.15, "oxygen": 0.10, "cardio": 0.10, "exertion": 0.25, "recovery": 0.25, "unobserved": 0.15},
+      "dominant_components": ["thermal", "exertion", "recovery"],
+      "dominant_fraction": 0.35,
+      "score_scale": 8.0
+    },
+    "exercise_burden": {
+      "components": {"thermal": 0.10, "oxygen": 0.05, "cardio": 0.15, "exertion": 0.35, "recovery": 0.25, "unobserved": 0.10},
+      "dominant_components": ["cardio", "exertion", "recovery"],
+      "dominant_fraction": 0.40,
+      "score_scale": 8.0
+    }
+  },
+  "training_loss_weights": {
+    "attention_0_negative": 0.667,
+    "attention_1_review": 1.111,
+    "attention_2_urgent": 1.667,
+    "rule": "inverse expected class frequency, normalized to mean 1; safety routing still precedes model scoring"
+  },
+  "measurement": {
+    "hr_sd_bpm": 2.5,
+    "temperature_sd_c": 0.12,
+    "spo2_sd_pct": 0.55,
+    "artifact_probability": 0.08,
+    "missing_probability": 0.04
+  },
+  "sources": {
+    "fever": "NHS fever in adults: high temperature usually >=38 C",
+    "spo2": "NHS England pulse oximetry: 93-94 contact, <=92 urgent after immediate recheck",
+    "alert_structure": "Royal College of Physicians NEWS2"
+  },
+  "provenance_note": "Scenario-balanced simulation assumptions; not prevalence estimates or clinical validation."
+}

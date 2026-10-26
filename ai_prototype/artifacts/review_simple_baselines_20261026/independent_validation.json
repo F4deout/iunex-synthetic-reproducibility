@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "prediction_files": 40,
+  "prediction_rows": 5189293,
+  "history_windows": 96480,
+  "protected_files_unchanged": 457,
+  "manifest_files_checked": 260,
+  "metrics_reproduced": true,
+  "same_test_sessions_and_truth_all_methods": true,
+  "history_past_subject_isolation": true,
+  "code_and_protocol_hashes_match": true,
+  "scope": "Saved-prediction recalculation, lineage and hash checks; no model retraining"
+}

@@ -1,0 +1,20 @@
+{
+  "status": "CALIBRATION_FOLLOWUP_COMPLETE",
+  "sources": {
+    "amendment_06": "cc4dfb756729803df399c939fac5a548215f6087623b050f0521ce53ad8b9109",
+    "analysis": "b81a7521ec2e7eedcf12f4fb89057b08a0da959f75ff8838d1dc81b45a3158d0",
+    "summary_code": "2f533194334a92100d847e211dd55f1f53d287f88550c0c3e0ff56c62a9012be",
+    "generator": "0c01193fe46db5b499a19b07741ff5a952a7794a90a9ece56b75088e68b7e178"
+  },
+  "frozen_inputs": {
+    "phase1_results": "2111a1027052620122d17d4138a6e32d94acfb29d15c4349a2a797d94463f085",
+    "cause_audit": "1f3fa6e3b4dbd950cab350a1337c877ec50032d2d8fe2813031781ebebcbc97c"
+  },
+  "artifacts": {
+    "results.json": "9a1ddfe590bc306edd7ed4710959a95a6ecb9b095ba114992e55e944f040c9e9",
+    "raw_predictions.csv": "c8fb9ccd87a08ba10e1f2df565cf86eb1879cd8d50e642b702ecf1a9af7412db",
+    "validation.json": "c88c44b0adf882de7ccf870bfb489f65e0bfcfe0081ca2f8ba03e047d68d02b2",
+    "summary.csv": "f5c8b472ff2d8d09f117dc6f63339d2c61b3b6a294b42ed68c550890418e6f1e",
+    "REPORT.md": "479d4046af56d65e2eea3542bad962ef26312340ce062217bd1867cbdff5647d"
+  }
+}

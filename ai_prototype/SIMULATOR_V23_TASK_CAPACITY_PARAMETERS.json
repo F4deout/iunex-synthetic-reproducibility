@@ -1,0 +1,84 @@
+{
+  "version": "v23-task-capacity-preregistered-01",
+  "created": "2026-09-28",
+  "result_status_at_lock": "no v2.3 generated data or prediction result viewed",
+  "activities": ["LOADED_MARCH", "BODYWEIGHT_CIRCUIT"],
+  "final_seeds": [110, 220, 330, 440, 550],
+  "population_reference": {
+    "aerobic_reference_source": "CDC NHANES CVX 1999-2004 estimated VO2max; central range only",
+    "normalized_quantiles": {
+      "p05": 0.700956878339754,
+      "p10": 0.758543556604946,
+      "p50": 1.0,
+      "p90": 1.3415682863178824,
+      "p95": 1.4762520193861064
+    },
+    "provenance": "EMPIRICAL_REFERENCE_NOT_MILITARY_POPULATION",
+    "critical": true
+  },
+  "task_capacity": {
+    "shared_aerobic_loading": {"low": 0.25, "base": 0.5, "high": 0.75, "provenance": "SIMULATION_ASSUMPTION", "critical": true},
+    "task_specific_log_sd": {"low": 0.1, "base": 0.2, "high": 0.3, "provenance": "SIMULATION_ASSUMPTION", "critical": true},
+    "cross_task_residual_correlation": {"low": 0.0, "base": 0.25, "high": 0.5, "provenance": "SIMULATION_ASSUMPTION", "critical": true},
+    "normalization": "median_1_positive_log_space"
+  },
+  "tolerance": {
+    "task_specific_log_sd": {"low": 0.15, "base": 0.3, "high": 0.45, "provenance": "SIMULATION_ASSUMPTION", "critical": true},
+    "capacity_tolerance_correlation": {"low": 0.0, "base": 0.25, "high": 0.5, "provenance": "SIMULATION_ASSUMPTION", "critical": true},
+    "threshold": 1.0,
+    "depletion_function": "max(relative_demand - threshold, 0) * actual_duration / reference_duration"
+  },
+  "recovery": {
+    "fast_time_constant_minutes": {"low": 10.0, "base": 30.0, "high": 60.0, "provenance": "SIMULATION_ASSUMPTION", "critical": true},
+    "slow_time_constant_hours": {"low": 12.0, "base": 24.0, "high": 48.0, "provenance": "SIMULATION_ASSUMPTION", "critical": true},
+    "individual_log_sd": {"low": 0.1, "base": 0.2, "high": 0.3, "provenance": "SIMULATION_ASSUMPTION", "critical": true}
+  },
+  "physiology": {
+    "baseline_hr_source": "frozen v2 calibration P01 empirical reference",
+    "hr_gain_bpm": {"low": 60.0, "base": 80.0, "high": 100.0, "provenance": "EXISTING_PROJECT_ASSUMPTION", "critical": true},
+    "subject_response_sd_bpm": {"low": 5.0, "base": 10.0, "high": 15.0, "provenance": "SIMULATION_ASSUMPTION", "critical": true},
+    "physiology_sd_bpm": {"low": 3.0, "base": 5.0, "high": 8.0, "provenance": "SIMULATION_ASSUMPTION", "critical": false},
+    "measurement_sd_bpm": {"low": 2.0, "base": 4.0, "high": 6.0, "provenance": "SIMULATION_ASSUMPTION_NOT_DEVICE_SPEC", "critical": false}
+  },
+  "latent_state": {
+    "strain_weights_relative_duration_depletion_debt_unobserved": [0.3, 0.15, 0.25, 0.2, 0.1],
+    "slow_debt_gain": {"low": 0.3, "base": 0.5, "high": 0.7, "provenance": "SIMULATION_ASSUMPTION", "critical": true}
+  },
+  "targets": {
+    "burden_coupling": {
+      "WEAK": [0.1, 0.1, 0.15, 0.15, 0.5],
+      "BASE": [0.25, 0.2, 0.2, 0.15, 0.2],
+      "STRONG": [0.35, 0.25, 0.2, 0.1, 0.1],
+      "order": ["relative_demand", "reserve_depletion", "strain", "prior_debt", "unobserved_target_factor"],
+      "provenance": "SIMULATION_ASSUMPTION",
+      "critical": true
+    },
+    "fatigue_weights": {
+      "values": [0.15, 0.25, 0.25, 0.25, 0.1],
+      "order": ["relative_demand", "reserve_depletion", "strain", "prior_debt", "unobserved_target_factor"],
+      "provenance": "SIMULATION_ASSUMPTION",
+      "critical": true
+    },
+    "condition_weights": {
+      "values": [0.2, 0.2, 0.25, 0.25, 0.1],
+      "order": ["inverse_relative_demand", "remaining_reserve", "inverse_strain", "inverse_prior_debt", "unobserved_positive_state"],
+      "provenance": "SIMULATION_ASSUMPTION",
+      "critical": true
+    },
+    "score_map": {"offset": 2.0, "scale": 6.0, "clip": [0.0, 10.0]},
+    "personal_bias_sd_points": {"low": 0.3, "base": 0.5, "high": 0.8, "provenance": "SIMULATION_ASSUMPTION", "critical": true},
+    "occasion_error_sd_points": {"low": 0.4, "base": 0.8, "high": 1.2, "provenance": "SIMULATION_ASSUMPTION", "critical": true}
+  },
+  "workload": {
+    "source": "frozen v2.2 workload grids and demand functions",
+    "status": "STRUCTURE_REUSED_VALUES_NOT_RECALIBRATED",
+    "loaded_march_task_capacity_data": "UNKNOWN_NEEDS_SOURCE",
+    "bodyweight_circuit_task_capacity_data": "UNKNOWN_NEEDS_SOURCE"
+  },
+  "reporting_requirements": {
+    "all_critical_sensitivity_families": true,
+    "no_post_result_parameter_adjustment": true,
+    "no_human_or_military_population_claim": true,
+    "separate_activity_results": true
+  }
+}

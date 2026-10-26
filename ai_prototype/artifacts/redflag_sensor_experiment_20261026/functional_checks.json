@@ -1,0 +1,75 @@
+{
+  "no_score_cancellation_cases": 605,
+  "status": "PASS",
+  "missing_never_cleared_in_sentinels": "PASS",
+  "existing_bundle_checks": [
+    {
+      "values": {
+        "hr": 75.0,
+        "temperature": 40.0,
+        "spo2": 98.0
+      },
+      "result": {
+        "status": "SAFETY_HOLD",
+        "subjective_state": null,
+        "task_outcome": null,
+        "warning": "Synthetic research model; not a clinical, military readiness, or task-assignment decision model."
+      }
+    },
+    {
+      "values": {
+        "hr": 75.0,
+        "temperature": 34.0,
+        "spo2": 98.0
+      },
+      "result": {
+        "status": "ABSTAIN_OUT_OF_DISTRIBUTION",
+        "out_of_range_features": [
+          "t0_temperature"
+        ],
+        "subjective_state": null,
+        "task_outcome": null,
+        "warning": "Synthetic research model; not a clinical, military readiness, or task-assignment decision model."
+      }
+    },
+    {
+      "values": {
+        "hr": 75.0,
+        "temperature": 36.8,
+        "spo2": 88.0
+      },
+      "result": {
+        "status": "SAFETY_HOLD",
+        "subjective_state": null,
+        "task_outcome": null,
+        "warning": "Synthetic research model; not a clinical, military readiness, or task-assignment decision model."
+      }
+    },
+    {
+      "values": {
+        "hr": 35.0,
+        "temperature": 36.8,
+        "spo2": 98.0
+      },
+      "result": {
+        "status": "SAFETY_HOLD",
+        "subjective_state": null,
+        "task_outcome": null,
+        "warning": "Synthetic research model; not a clinical, military readiness, or task-assignment decision model."
+      }
+    },
+    {
+      "values": {
+        "hr": 145.0,
+        "temperature": 36.8,
+        "spo2": 98.0
+      },
+      "result": {
+        "status": "SAFETY_HOLD",
+        "subjective_state": null,
+        "task_outcome": null,
+        "warning": "Synthetic research model; not a clinical, military readiness, or task-assignment decision model."
+      }
+    }
+  ]
+}

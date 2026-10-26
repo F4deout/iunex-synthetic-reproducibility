@@ -1,0 +1,372 @@
+﻿IUNEX 심사 보완 재현정보 — 기존 설정·결과의 정리
+
+본 자료 작성에서 데이터 생성·모형 학습·문턱 조정·추가 실험을 수행하지 않았다. 기존 결과를 집계하고 원본 코드·설정을 복사했다.
+본문의 인원·반복·정답·기존 실험 결과는 유지했다. 본문의 표는 일부 수치를 반올림하므로 원정밀도와 전체 점수는 동봉 CSV/JSON으로 확인한다.
+원 프로젝트의 실행검증 잠금과 별도 논문 보완자료의 체크섬을 구분한다. 동봉 코드는 원 경로구조를 유지했으며 환경·원시공개자료·대용량 예측행은 이 묶음에 모두 포함하지 않는다. 실행을 새로 검증했다는 뜻은 아니다.
+
+A1. 생성식·주요 모수와 근거 구분
+RQ1은 개인 특성/회복 부채/수면/스트레스/비관측요인에서 잠재상태를 만들고 센서 관측과 자기보고를 별도로 생성한다.
+잠재피로 F=clip(0.50×debt_pre+0.25×sleep+0.15×stress+0.10×unobserved,0,1). sleep~Beta(2,5),stress~Beta(2,4),unobserved=clip(N(0.5,0.18),0,1).
+참 HR=개인기준+15F+6stress+N(0,1.3); 참 체온=개인기준+0.25F+0.10stress+N(0,0.04); 참SpO2=clip(개인기준−0.5F+N(0,0.15),90,99.8).
+보고점수=clip(2+6×개인slope×F(컨디션은1−F)+bias+drift+N(0,0.35),0,10). 개인slope/bias와과정변동은모수표참조.
+수행 상대요구량=외부요구량/[운동별능력×exp(능력변화)×(1−0.30F)]. 임계값1 이하이면 계획시간 완료, 초과이면 tolerance/max(상대요구량−1,0.02)×행동변동과 계획시간의 최소값.
+운동부담은 상대요구량·실제시간·사전피로·예비량소모·비관측변동의 가중 결합. 회복필요시간=max(0,4+28×부담×(개인회복시간/24)+N(0,1.2))시간.
+debt_pre=이전debt×exp(−24×gap_days/개인회복시간); 다음debt=clip(debt_pre+0.45×부담+0.25×소모,0,1).
+범위·비율·분포를 임의로 실증값으로 격상하지 않는다. 원래 PRETASK의 계수는 프로젝트 합성가정이며, 후속 관측간격 히스토그램 등 실제로 사용한 공개자료 참조는 아래 파일의source/provenance를 따른다.
+후속 자연관측은 능력의 연속·사건 변화, 변화통제는 개선/안정/저하 집단을 생성한다. 센서과정은같은기본식을사용하고 활동후/회복심박 측정 및 보고성향변동을 별도 추가한다. 모든수치·LOW/BASE/HIGH는 아래 설정 원문을 전개한 표와 동봉 소스에 있다.
+
+【PRETASK_MODEL_PARAMETERS.json】
+version | pretask-v1-minimal-parameters-01
+status | PREREGISTERED_BEFORE_IMPLEMENTATION
+seeds | [110, 220, 330, 440, 550]
+subjects.total | 120
+subjects.train | 72
+subjects.validation | 24
+subjects.test | 24
+sessions.calibration | 100
+sessions.evaluation | 30
+history_k | 20
+task_types | ["AEROBIC", "LOADED_MOVEMENT", "BODYWEIGHT_CIRCUIT"]
+planned_demand_levels | [0.7, 0.95, 1.2, 1.5]
+planned_duration_minutes | [20.0, 40.0, 60.0]
+observation_gap_days.values | [1, 2, 3, 7]
+observation_gap_days.probabilities | [0.45, 0.3, 0.15, 0.1]
+subject.capacity_log_sd | 0.28
+subject.cross_task_capacity_correlation | 0.45
+subject.tolerance_minutes_log_mean | 2.4849066497880004
+subject.tolerance_minutes_log_sd | 0.3
+subject.recovery_hours_log_mean | 3.1780538303479458
+subject.recovery_hours_log_sd | 0.25
+subject.perception_slope_log_sd | 0.22
+subject.reporting_bias_sd_points | 0.45
+capacity_dynamics.continuous_log_sd_per_30_days | 0.02
+capacity_dynamics.event_probability_per_30_days | 0.07
+capacity_dynamics.event_log_sd | 0.06
+pretask_state.debt_weight | 0.5
+pretask_state.sleep_weight | 0.25
+pretask_state.stress_weight | 0.15
+pretask_state.unobserved_weight | 0.1
+pretask_state.session_unobserved_sd | 0.18
+physiology.resting_hr_mean | 64.0
+physiology.resting_hr_sd | 7.0
+physiology.temperature_mean_c | 36.65
+physiology.temperature_between_subject_sd_c | 0.18
+physiology.spo2_mean_pct | 97.5
+physiology.spo2_between_subject_sd_pct | 0.7
+physiology.fatigue_hr_gain_bpm | 15.0
+physiology.stress_hr_gain_bpm | 6.0
+physiology.measurement_hr_sd_bpm | 3.0
+physiology.measurement_temperature_sd_c | 0.12
+physiology.measurement_spo2_sd_pct | 0.6
+physiology.missing_probability | 0.04
+physiology.artifact_probability | 0.06
+task_outcome.relative_demand_threshold | 1.0
+task_outcome.fatigue_capacity_penalty | 0.3
+task_outcome.behavioral_stop_log_sd | 0.1
+task_outcome.post_burden_weights.relative_demand | 0.3
+task_outcome.post_burden_weights.duration | 0.2
+task_outcome.post_burden_weights.pre_fatigue | 0.2
+task_outcome.post_burden_weights.depletion | 0.2
+task_outcome.post_burden_weights.unobserved | 0.1
+task_outcome.recovery_delay_base_hours | 4.0
+task_outcome.recovery_delay_burden_gain_hours | 28.0
+reporting.session_noise_sd_points | 0.35
+reporting.drift_sd_per_30_days | 0.05
+safety_gate_research_only.resting_hr_low_bpm | 40.0
+safety_gate_research_only.resting_hr_high_bpm | 120.0
+safety_gate_research_only.temperature_high_c | 38.0
+safety_gate_research_only.spo2_low_pct | 94.0
+safety_gate_research_only.provenance | existing project screening rule; not validated clinical or military deployment threshold
+provenance | SIMULATION_ASSUMPTION_UNLESS_EXPLICITLY_DESCRIBED; NO HUMAN PERFORMANCE CLAIM
+freeze_rules | ["no post-result parameter adjustment", "no current-session post-task input", "no latent input", "safety gate separate from learned model"]
+【RQ1_PHYSIOLOGICAL_HISTORY_VALUE_PARAMETERS.json】
+version | rq1-physiological-history-value-parameters-01
+created | 2026-10-07
+status | PREREGISTERED_BEFORE_IMPLEMENTATION
+parent_protocol | RQ1_PHYSIOLOGICAL_HISTORY_VALUE_PROTOCOL.md
+evidence_scope | synthetic identifiability and sensitivity only; no human, military, clinical, or device-performance claim
+sources.pretask | PRETASK_MODEL_PARAMETERS.json
+sources.longitudinal | RQ1_LONGITUDINAL_V2_FINAL_PARAMETERS.json
+sources.task_capacity | SIMULATOR_V23_TASK_CAPACITY_PARAMETERS.json
+sources.state_mixture | RQ1_STATE_MIXTURE_PARAMETERS.json
+sources.empirical_reference | artifacts/rq1_longitudinal_v2_calibration/calibration.json
+seeds | [110, 220, 330, 440, 550]
+subjects.total | 120
+subjects.train | 72
+subjects.validation | 24
+subjects.test | 24
+subjects.provenance | INHERITED_METHOD_CHOICE
+subjects.critical | True
+sessions.calibration | 100
+sessions.evaluation | 30
+sessions.history_lengths | [0, 5, 10, 20, 30, 50, 75, 100]
+sessions.evaluation_session_identity_rule | same subject/session set for all history lengths and feature conditions
+sessions.provenance | INHERITED_METHOD_CHOICE
+sessions.critical | True
+task_design.task_types | ["AEROBIC", "LOADED_MOVEMENT", "BODYWEIGHT_CIRCUIT"]
+task_design.planned_demand_levels | [0.7, 0.95, 1.2, 1.5]
+task_design.planned_duration_minutes | [20.0, 40.0, 60.0]
+task_design.assignment_rule | reuse frozen PRETASK rotation; no latent capacity, tolerance, recovery, debt, or future outcome in assignment
+task_design.independent_anchor | observed_anchor available before assignment and supplied to every feature condition including k=0
+task_design.provenance | INHERITED_SIMULATION_DESIGN_NOT_HUMAN_PROTOCOL
+task_design.critical | True
+observation_gap_days.LOW.rule | resample frozen PMData wellness day-gap histogram and cap at 3 days
+observation_gap_days.BASE.rule | resample frozen PMData wellness day-gap histogram without alteration
+observation_gap_days.HIGH.rule | multiply resampled PMData wellness day gap by 3 and cap at 45 days
+observation_gap_days.source | artifacts/rq1_longitudinal_v2_calibration/calibration.json#observation_cadence_days.wellness.day_gap_counts
+observation_gap_days.provenance | EMPIRICAL_REFERENCE_PLUS_SIMULATION_SENSITIVITY
+observation_gap_days.critical | True
+datasets.NATURALISTIC.capacity_dynamics_per_30_days.LOW.continuous_change_sd | 0.01
+datasets.NATURALISTIC.capacity_dynamics_per_30_days.LOW.event_probability | 0.03
+datasets.NATURALISTIC.capacity_dynamics_per_30_days.LOW.event_magnitude_sd | 0.03
+datasets.NATURALISTIC.capacity_dynamics_per_30_days.BASE.continuous_change_sd | 0.02
+datasets.NATURALISTIC.capacity_dynamics_per_30_days.BASE.event_probability | 0.07
+datasets.NATURALISTIC.capacity_dynamics_per_30_days.BASE.event_magnitude_sd | 0.06
+datasets.NATURALISTIC.capacity_dynamics_per_30_days.HIGH.continuous_change_sd | 0.04
+datasets.NATURALISTIC.capacity_dynamics_per_30_days.HIGH.event_probability | 0.15
+datasets.NATURALISTIC.capacity_dynamics_per_30_days.HIGH.event_magnitude_sd | 0.1
+datasets.NATURALISTIC.event_time_rule | subject-specific independent draw; never aligned to split or evaluation boundary
+datasets.NATURALISTIC.provenance | INHERITED_SIMULATION_ASSUMPTION
+datasets.NATURALISTIC.critical | True
+datasets.CONTROLLED_CHANGE.groups_per_seed.IMPROVEMENT | 40
+datasets.CONTROLLED_CHANGE.groups_per_seed.STABLE | 40
+datasets.CONTROLLED_CHANGE.groups_per_seed.DECLINE | 40
+datasets.CONTROLLED_CHANGE.groups_per_split.train.IMPROVEMENT | 24
+datasets.CONTROLLED_CHANGE.groups_per_split.train.STABLE | 24
+datasets.CONTROLLED_CHANGE.groups_per_split.train.DECLINE | 24
+datasets.CONTROLLED_CHANGE.groups_per_split.validation.IMPROVEMENT | 8
+datasets.CONTROLLED_CHANGE.groups_per_split.validation.STABLE | 8
+datasets.CONTROLLED_CHANGE.groups_per_split.validation.DECLINE | 8
+datasets.CONTROLLED_CHANGE.groups_per_split.test.IMPROVEMENT | 8
+datasets.CONTROLLED_CHANGE.groups_per_split.test.STABLE | 8
+datasets.CONTROLLED_CHANGE.groups_per_split.test.DECLINE | 8
+datasets.CONTROLLED_CHANGE.discrete_event_boundary | after calibration session 100 and before evaluation session 1
+datasets.CONTROLLED_CHANGE.signed_log_capacity_shift.LOW | 0.03
+datasets.CONTROLLED_CHANGE.signed_log_capacity_shift.BASE | 0.06
+datasets.CONTROLLED_CHANGE.signed_log_capacity_shift.HIGH | 0.1
+datasets.CONTROLLED_CHANGE.signed_log_capacity_shift.IMPROVEMENT_sign | 1
+datasets.CONTROLLED_CHANGE.signed_log_capacity_shift.STABLE_sign | 0
+datasets.CONTROLLED_CHANGE.signed_log_capacity_shift.DECLINE_sign | -1
+datasets.CONTROLLED_CHANGE.continuous_change_sd_per_30_days.LOW | 0.01
+datasets.CONTROLLED_CHANGE.continuous_change_sd_per_30_days.BASE | 0.02
+datasets.CONTROLLED_CHANGE.continuous_change_sd_per_30_days.HIGH | 0.04
+datasets.CONTROLLED_CHANGE.additional_random_discrete_events | False
+datasets.CONTROLLED_CHANGE.evaluation_segments.pre_event_reference | calibration sessions 91-100; audit only, not final test endpoint
+datasets.CONTROLLED_CHANGE.evaluation_segments.immediate_post_change | evaluation sessions 1-5
+datasets.CONTROLLED_CHANGE.evaluation_segments.adaptation_window | evaluation sessions 6-15
+datasets.CONTROLLED_CHANGE.evaluation_segments.late_post_change | evaluation sessions 16-30
+datasets.CONTROLLED_CHANGE.provenance | METHOD_CHOICE_USING_EXISTING_EVENT_MAGNITUDE_FAMILY; NOT POPULATION ESTIMATE
+datasets.CONTROLLED_CHANGE.critical | True
+subject_heterogeneity.task_capacity.capacity_log_sd | 0.28
+subject_heterogeneity.task_capacity.cross_task_capacity_correlation | 0.45
+subject_heterogeneity.task_capacity.source | PRETASK_MODEL_PARAMETERS.json#subject
+subject_heterogeneity.task_capacity.provenance | INHERITED_SIMULATION_ASSUMPTION
+subject_heterogeneity.task_capacity.critical | True
+subject_heterogeneity.physiological_response_sd_bpm.LOW | 5.0
+subject_heterogeneity.physiological_response_sd_bpm.BASE | 10.0
+subject_heterogeneity.physiological_response_sd_bpm.HIGH | 15.0
+subject_heterogeneity.physiological_response_sd_bpm.source | RQ1_LONGITUDINAL_V2_FINAL_PARAMETERS.json#physiology.subject_response_sd_bpm
+subject_heterogeneity.physiological_response_sd_bpm.provenance | INHERITED_SIMULATION_ASSUMPTION
+subject_heterogeneity.physiological_response_sd_bpm.critical | True
+subject_heterogeneity.recovery_individual_log_sd.LOW | 0.1
+subject_heterogeneity.recovery_individual_log_sd.BASE | 0.2
+subject_heterogeneity.recovery_individual_log_sd.HIGH | 0.3
+subject_heterogeneity.recovery_individual_log_sd.source | RQ1_LONGITUDINAL_V2_FINAL_PARAMETERS.json#recovery.individual_log_sd
+subject_heterogeneity.recovery_individual_log_sd.provenance | INHERITED_SIMULATION_ASSUMPTION
+subject_heterogeneity.recovery_individual_log_sd.critical | True
+subject_heterogeneity.fast_recovery_time_constant_minutes.LOW | 10.0
+subject_heterogeneity.fast_recovery_time_constant_minutes.BASE | 30.0
+subject_heterogeneity.fast_recovery_time_constant_minutes.HIGH | 60.0
+subject_heterogeneity.fast_recovery_time_constant_minutes.provenance | INHERITED_SIMULATION_ASSUMPTION
+subject_heterogeneity.fast_recovery_time_constant_minutes.critical | True
+subject_heterogeneity.slow_recovery_time_constant_hours.LOW | 12.0
+subject_heterogeneity.slow_recovery_time_constant_hours.BASE | 24.0
+subject_heterogeneity.slow_recovery_time_constant_hours.HIGH | 48.0
+subject_heterogeneity.slow_recovery_time_constant_hours.provenance | INHERITED_SIMULATION_ASSUMPTION
+subject_heterogeneity.slow_recovery_time_constant_hours.critical | True
+physiology_and_measurement.resting_hr_mean_bpm | 64.0
+physiology_and_measurement.resting_hr_between_subject_sd_bpm | 7.0
+physiology_and_measurement.temperature_mean_c | 36.65
+physiology_and_measurement.temperature_between_subject_sd_c | 0.18
+physiology_and_measurement.spo2_mean_pct | 97.5
+physiology_and_measurement.spo2_between_subject_sd_pct | 0.7
+physiology_and_measurement.provenance | INHERITED_PROJECT_EMPIRICAL_REFERENCE_OR_SIMULATION_ASSUMPTION; NOT MILITARY POPULATION ESTIMATE
+physiology_and_measurement.measurement_sensitivity.LOW.hr_sd_bpm | 1.5
+physiology_and_measurement.measurement_sensitivity.LOW.temperature_sd_c | 0.06
+physiology_and_measurement.measurement_sensitivity.LOW.spo2_sd_pct | 0.3
+physiology_and_measurement.measurement_sensitivity.LOW.missing_probability | 0.02
+physiology_and_measurement.measurement_sensitivity.LOW.artifact_probability | 0.03
+physiology_and_measurement.measurement_sensitivity.BASE.hr_sd_bpm | 3.0
+physiology_and_measurement.measurement_sensitivity.BASE.temperature_sd_c | 0.12
+physiology_and_measurement.measurement_sensitivity.BASE.spo2_sd_pct | 0.6
+physiology_and_measurement.measurement_sensitivity.BASE.missing_probability | 0.04
+physiology_and_measurement.measurement_sensitivity.BASE.artifact_probability | 0.06
+physiology_and_measurement.measurement_sensitivity.HIGH.hr_sd_bpm | 6.0
+physiology_and_measurement.measurement_sensitivity.HIGH.temperature_sd_c | 0.24
+physiology_and_measurement.measurement_sensitivity.HIGH.spo2_sd_pct | 1.2
+physiology_and_measurement.measurement_sensitivity.HIGH.missing_probability | 0.08
+physiology_and_measurement.measurement_sensitivity.HIGH.artifact_probability | 0.12
+physiology_and_measurement.measurement_sensitivity.rule | BASE inherits PRETASK; LOW halves and HIGH doubles BASE magnitude/rate
+physiology_and_measurement.measurement_sensitivity.provenance | SIMULATION_SENSITIVITY_ASSUMPTION_NOT_DEVICE_SPEC
+physiology_and_measurement.measurement_sensitivity.critical | True
+physiology_and_measurement.post_and_recovery_hr_measurement_rule | apply the same sensor measurement, artifact, missingness, and quality process used for current HR; never expose true_hr-derived values directly
+physiology_and_measurement.critical | True
+latent_state_and_task_outcome.pretask_state_weights.debt | 0.5
+latent_state_and_task_outcome.pretask_state_weights.sleep | 0.25
+latent_state_and_task_outcome.pretask_state_weights.stress | 0.15
+latent_state_and_task_outcome.pretask_state_weights.unobserved | 0.1
+latent_state_and_task_outcome.session_unobserved_sd | 0.18
+latent_state_and_task_outcome.relative_demand_threshold | 1.0
+latent_state_and_task_outcome.fatigue_capacity_penalty | 0.3
+latent_state_and_task_outcome.behavioral_stop_log_sd | 0.1
+latent_state_and_task_outcome.post_burden_weights.relative_demand | 0.3
+latent_state_and_task_outcome.post_burden_weights.duration | 0.2
+latent_state_and_task_outcome.post_burden_weights.pre_fatigue | 0.2
+latent_state_and_task_outcome.post_burden_weights.depletion | 0.2
+latent_state_and_task_outcome.post_burden_weights.unobserved | 0.1
+latent_state_and_task_outcome.recovery_delay_base_hours | 4.0
+latent_state_and_task_outcome.recovery_delay_burden_gain_hours | 28.0
+latent_state_and_task_outcome.provenance | INHERITED_PRETASK_SIMULATION_ASSUMPTION
+latent_state_and_task_outcome.critical | True
+reporting_process_secondary_only.stable_bias_sd_points.LOW | 0.3
+reporting_process_secondary_only.stable_bias_sd_points.BASE | 0.55
+reporting_process_secondary_only.stable_bias_sd_points.HIGH | 0.8
+reporting_process_secondary_only.drift_sd_per_30_days.LOW | 0.03
+reporting_process_secondary_only.drift_sd_per_30_days.BASE | 0.07
+reporting_process_secondary_only.drift_sd_per_30_days.HIGH | 0.12
+reporting_process_secondary_only.shift_probability_per_30_days.LOW | 0.03
+reporting_process_secondary_only.shift_probability_per_30_days.BASE | 0.08
+reporting_process_secondary_only.shift_probability_per_30_days.HIGH | 0.15
+reporting_process_secondary_only.shift_sd_points.LOW | 0.25
+reporting_process_secondary_only.shift_sd_points.BASE | 0.5
+reporting_process_secondary_only.shift_sd_points.HIGH | 0.8
+reporting_process_secondary_only.session_noise_sd_points.LOW | 0.2
+reporting_process_secondary_only.session_noise_sd_points.BASE | 0.35
+reporting_process_secondary_only.session_noise_sd_points.HIGH | 0.6
+reporting_process_secondary_only.provenance | INHERITED_SIMULATION_ASSUMPTION
+reporting_process_secondary_only.critical | False
+reporting_process_secondary_only.role | secondary observed-self-report comparison only; never primary physiological-history success criterion
+history_features.recency.record_counts | [0, 5, 10, 20, 30, 50, 75, 100]
+history_features.recency.calendar_windows_days | [30, 90]
+history_features.recency.ewma_half_life_days | 30
+history_features.required_observed_groups | ["resting or pretask sensor baseline", "workload-conditioned sensor response", "actual duration and completion", "observed stop time only when stopped", "measured recovery response", "recovery interval", "time-ordered independent performance anchor"]
+history_features.past_self_report_in_primary | False
+history_features.past_self_report_in_secondary_C6_C7_only | True
+history_features.provenance | PREREGISTERED_METHOD_CHOICE
+history_features.critical | True
+models.continuous_primary.type | Ridge
+models.continuous_primary.alpha_candidates | [1.0, 10.0, 100.0]
+models.completion_primary.type | L2_logistic_regression
+models.completion_primary.C_candidates | [0.1, 1.0, 10.0]
+models.censored_stop_time.type | log_normal_AFT_L2
+models.censored_stop_time.alpha_candidates | [0.1, 1.0, 10.0]
+models.censored_stop_time.selection_metric | validation censored negative log likelihood
+models.censored_stop_time.reporting | ["Harrell_C", "calibration_by_time", "IPCW_MAE_when_estimable"]
+models.nonlinear_audit_probe.type | RandomForest
+models.nonlinear_audit_probe.n_estimators | 300
+models.nonlinear_audit_probe.max_depth_candidates | [6, null]
+models.nonlinear_audit_probe.min_samples_leaf_candidates | [5, 10]
+models.nonlinear_audit_probe.max_features | sqrt
+models.nonlinear_audit_probe.random_state_rule | final seed
+models.nonlinear_audit_probe.role | audit only; does not replace primary linear model
+models.preprocessing_fit | train_only
+models.selection | validation_only
+models.critical | True
+success_thresholds.continuous_minimum_mae_improvement_points | 0.02
+success_thresholds.required_seed_direction | 5_of_5
+success_thresholds.paired_ci_rule | 95_percent_CI_excludes_zero
+success_thresholds.falsification_loss_fraction | 0.5
+success_thresholds.role | method decision threshold, not clinical importance threshold
+unknown_not_claimed | ["military population distribution of longitudinal fitness change", "military task-specific capacity and recovery distributions", "device-specific measurement-error and artifact distributions", "actual repeat reliability of the subjective targets", "actual physiological-state ground truth", "actual rates and causes of voluntary or safety stopping", "session-level environmental exposure effects"]
+freeze_rules.report_all_critical_LOW_BASE_HIGH_conditions | True
+freeze_rules.no_post_result_parameter_adjustment | True
+freeze_rules.no_latent_predictor_input | True
+freeze_rules.no_current_or_future_target_input | True
+freeze_rules.no_human_or_military_population_claim | True
+freeze_rules.no_device_accuracy_claim | True
+【E4_DAILY_STATE_PARAMETERS_20261026.json】
+version | e4-daily-state-20261026-01
+scope | separate post-review synthetic E4 experiment, not human calibration
+populations.total | 480
+populations.train | 288
+populations.validation | 96
+populations.test | 96
+populations.blocks | 4
+seeds | [110, 220, 330, 440, 550, 660, 770, 880, 990, 1100, 1210, 1320, 1430, 1540, 1650, 1760, 1870, 1980, 2090, 2200, 2310, 2420, 2530, 2640, 2750, 2860, 2970, 3080, 3190, 3300]
+history_k | 20
+families.reserve_state_amplitude.LOW | 0.075
+families.reserve_state_amplitude.BASE | 0.15
+families.reserve_state_amplitude.HIGH | 0.3
+families.sensor_coupling.LOW | 0.5
+families.sensor_coupling.BASE | 1.0
+families.sensor_coupling.HIGH | 2.0
+families.hidden_reserve_amplitude.LOW | 0.04
+families.hidden_reserve_amplitude.BASE | 0.08
+families.hidden_reserve_amplitude.HIGH | 0.16
+families.measurement_multiplier.LOW | 0.5
+families.measurement_multiplier.BASE | 1.0
+families.measurement_multiplier.HIGH | 2.0
+families.state_tau_hours.LOW | 6.0
+families.state_tau_hours.BASE | 24.0
+families.state_tau_hours.HIGH | 96.0
+scenarios | BASE + individual family LOW/HIGH, 11 total; paired exogenous random streams
+state_bounding_scale | 2.0
+sensor.hr_state_gain_bpm | 15.0
+sensor.temperature_state_gain_c | 0.25
+sensor.spo2_state_gain_pp | 0.5
+sensor.hr_process_sd_bpm | 1.3
+sensor.temperature_process_sd_c | 0.04
+sensor.spo2_process_sd_pp | 0.15
+sensor.temperature_baseline_mean_c | 36.65
+sensor.temperature_baseline_sd_c | 0.18
+sensor.spo2_baseline_mean_pct | 97.5
+sensor.spo2_baseline_sd_pp | 0.7
+sensor.spo2_baseline_bounds | [94.0, 99.5]
+sensor.measurement_sd.hr | 3.0
+sensor.measurement_sd.temperature | 0.12
+sensor.measurement_sd.spo2 | 0.6
+sensor.missing_probability | 0.04
+sensor.artifact_probability | 0.06
+sensor.artifact_sd_multiplier | 4.0
+sensor.quality_center | 0.94
+sensor.quality_artifact_penalty | 0.55
+sensor.quality_sd | 0.035
+sensor.spo2_beta_reference_mean | 97.5
+clock.uniform_error_halfwidth_seconds | 3.0
+clock.resolution_seconds | 1.0
+model.ridge_alphas | [1.0, 10.0, 100.0]
+model.target_transform | log observed stop minutes
+model.selection | validation minute MAE
+model.final_fit | train+validation
+falsification.seed | 110
+falsification.scenario | BASE
+falsification.rng_seed | 20261026
+falsification.required_collapse_fraction | 0.5
+falsification.minimum_gain_over_mean_minutes | 0.01
+parameter_provenance.population_schedule_split | inherited v2.1 evaluation design, not population estimate
+parameter_provenance.hr_subject_baseline | inherited E4 profiles referencing P01 empirical calibration; not military reference
+parameter_provenance.sensor_measurement_and_baseline | existing PRETASK assumptions; not official device accuracy
+parameter_provenance.sensor_state_gains | existing-project assumption extended to signed daily state; critical/outcome-sensitive
+parameter_provenance.families | new critical/outcome-sensitive simulation assumptions; all LOW/BASE/HIGH values fixed before new results
+parameter_provenance.clock | existing tolerance robustness BASE assumption
+stop_rule | No post-result parameter or formula adjustment; preserve unfavorable results. No manuscript edits.
+
+A2. 별도 보완·선별 실험
+기존 E4는 t=q/[60(v−CS)]분과 회복 q=D−(D−q이전)exp(−60g/τ)를 사용한다. g는h,τ는분. r~삼각(0.94,0.97,1.00),D~삼각(104,130,156)m,τ~삼각(3,4,5)분.
+같은선행부하·12분계획·72시간간격의G6/E4는결과가반복됐으며,기존2880시험값의복사오차0을보존했다. 원래중단정답은별도시계오차/반올림없는수행식값이다.
+기존중단시간분포: {"n": 2880, "mean": 4.208120140819786, "sd": 0.653722679823097, "quantiles": {"min": 2.6894829017721915, "q05": 3.2518285965915834, "median": 4.150844259977696, "q95": 5.384016708718115, "max": 6.444407950482212}}
+당일상태는 독립 프로토콜의 AR상태와 비관측 변동을 사용한다. LOW/BASE/HIGH·오차범위는 위E4설정표 그대로이며 결과보고뒤변경하지않았다.
+이상선별은 정상/고체온/저체온/낮은SpO2/낮은HR/높은HR/복합의참조범주와 측정오차에대한기능stress-test다. 전체설정은REDFLAG_SENSOR_PROTOCOL_20261026.json참조. 특정질환진단모형이나 실제군집단성능검증이아니다.
+원래 점수/시간의 Ridge·로지스틱은 train-only 전처리/검증선택 후 train+validation 재학습. 새HGB선별은 train-only 학습/검증 문턱선택 후재학습없음. 시험자료는모든경로에서선택미사용.
+미수행 항목: 혼합효과 모형 비교와 실제 장비·장병 실증. 이미 수행한 평균·최근값·수행기준 대조를 제시했으며 이를 미수행 실험으로 대체했다고 기술하지 않는다.
+
+A3. seed·세션 배정·분할·파일 목록
+주분석30seed: 110, 220, 330, 440, 550, 660, 770, 880, 990, 1100, 1210, 1320, 1430, 1540, 1650, 1760, 1870, 1980, 2090, 2200, 2310, 2420, 2530, 2640, 2750, 2860, 2970, 3080, 3190, 3300
+후속5seed: 110,220,330,440,550. 480명은기존120명생성기4블록을사용하며blockseed=base_seed+1000003×block_index(0..3),개인/세션ID에블록접두만추가한다.
+원래PRETASK 운동배정: task=TASKS[(j+개인index)%3],요구수준=levels[(3j+index)%4],예정시간=durations[(5j+index)%3]. 잠재능력이나미래결과를이배정에넣지않는다.
+기본120명의분할은72/24/24,후속변화통제는각분할내개선/안정/저하24/24/24,8/8/8,8/8/8. k는현재시점직전기록만사용하며동일시험세션을대조한다.
+코드 실행 환경: Python·NumPy·SciPy·scikit-learn. 프로젝트 vendor 또는 동일 버전 환경 필요. 현재 로컬환경의 라이브러리 버전과 기존 실행기록은 원 프로젝트에 따르며 본 보완에서는 새 모델 실행을 하지 않았다.
+주 실행기: run_scale_stability.py, run_review_simple_baselines_20261026.py, run_rq1_physiological_history_value_phase1.py, run_e4_daily_state_20261026.py, run_redflag_sensor_experiment_20261026.py.
+이 실행기는 산출물 덮어쓰기 방지를 포함하므로 기존실험폴더에 바로실행하지 않는다. 본문수정은이 실행기를호출하지않았다.
+
+동봉파일sha256목록은manifest.json참조.

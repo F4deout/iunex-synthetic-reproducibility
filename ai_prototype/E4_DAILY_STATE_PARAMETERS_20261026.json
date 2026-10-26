@@ -1,0 +1,38 @@
+{
+  "version": "e4-daily-state-20261026-01",
+  "scope": "separate post-review synthetic E4 experiment, not human calibration",
+  "populations": {"total":480,"train":288,"validation":96,"test":96,"blocks":4},
+  "seeds": [110,220,330,440,550,660,770,880,990,1100,1210,1320,1430,1540,1650,1760,1870,1980,2090,2200,2310,2420,2530,2640,2750,2860,2970,3080,3190,3300],
+  "history_k":20,
+  "families": {
+    "reserve_state_amplitude":{"LOW":0.075,"BASE":0.15,"HIGH":0.30},
+    "sensor_coupling":{"LOW":0.5,"BASE":1.0,"HIGH":2.0},
+    "hidden_reserve_amplitude":{"LOW":0.04,"BASE":0.08,"HIGH":0.16},
+    "measurement_multiplier":{"LOW":0.5,"BASE":1.0,"HIGH":2.0},
+    "state_tau_hours":{"LOW":6.0,"BASE":24.0,"HIGH":96.0}
+  },
+  "scenarios":"BASE + individual family LOW/HIGH, 11 total; paired exogenous random streams",
+  "state_bounding_scale":2.0,
+  "sensor":{
+    "hr_state_gain_bpm":15.0,"temperature_state_gain_c":0.25,"spo2_state_gain_pp":0.5,
+    "hr_process_sd_bpm":1.3,"temperature_process_sd_c":0.04,"spo2_process_sd_pp":0.15,
+    "temperature_baseline_mean_c":36.65,"temperature_baseline_sd_c":0.18,
+    "spo2_baseline_mean_pct":97.5,"spo2_baseline_sd_pp":0.7,"spo2_baseline_bounds":[94.0,99.5],
+    "measurement_sd":{"hr":3.0,"temperature":0.12,"spo2":0.6},
+    "missing_probability":0.04,"artifact_probability":0.06,"artifact_sd_multiplier":4.0,
+    "quality_center":0.94,"quality_artifact_penalty":0.55,"quality_sd":0.035,
+    "spo2_beta_reference_mean":97.5
+  },
+  "clock":{"uniform_error_halfwidth_seconds":3.0,"resolution_seconds":1.0},
+  "model":{"ridge_alphas":[1.0,10.0,100.0],"target_transform":"log observed stop minutes","selection":"validation minute MAE","final_fit":"train+validation"},
+  "falsification":{"seed":110,"scenario":"BASE","rng_seed":20261026,"required_collapse_fraction":0.5,"minimum_gain_over_mean_minutes":0.01},
+  "parameter_provenance":{
+    "population_schedule_split":"inherited v2.1 evaluation design, not population estimate",
+    "hr_subject_baseline":"inherited E4 profiles referencing P01 empirical calibration; not military reference",
+    "sensor_measurement_and_baseline":"existing PRETASK assumptions; not official device accuracy",
+    "sensor_state_gains":"existing-project assumption extended to signed daily state; critical/outcome-sensitive",
+    "families":"new critical/outcome-sensitive simulation assumptions; all LOW/BASE/HIGH values fixed before new results",
+    "clock":"existing tolerance robustness BASE assumption"
+  },
+  "stop_rule":"No post-result parameter or formula adjustment; preserve unfavorable results. No manuscript edits."
+}

@@ -1,0 +1,15 @@
+{
+  "lock_id": "rq1-physiological-history-value-protocol",
+  "created_at": "2026-10-07",
+  "status": "PROTOCOL_LOCKED_PARAMETER_REGISTER_REQUIRED",
+  "implementation_started": false,
+  "experiment_started": false,
+  "existing_frozen_results_modified": false,
+  "files": [
+    {
+      "path": "RQ1_PHYSIOLOGICAL_HISTORY_VALUE_PROTOCOL.md",
+      "sha256": "dcd649f3724b4112e8b97d44913ffd42ec1f4ea42ad35849ea85de8e2e3bdfe0",
+      "bytes": 14768
+    }
+  ]
+}

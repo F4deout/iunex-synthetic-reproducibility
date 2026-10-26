@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "prediction_rows": 1739520,
+  "recomputed_metrics": 720,
+  "identical_test_truth_across_sensors_and_history": "PASS",
+  "split_isolation": "PASS",
+  "history_windows": "PASS",
+  "HR_channel_exclusion": "PASS",
+  "protected_files_unchanged": "PASS"
+}

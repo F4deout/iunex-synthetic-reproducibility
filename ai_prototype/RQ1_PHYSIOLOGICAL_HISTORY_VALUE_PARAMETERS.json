@@ -1,0 +1,326 @@
+{
+  "version": "rq1-physiological-history-value-parameters-01",
+  "created": "2026-10-07",
+  "status": "PREREGISTERED_BEFORE_IMPLEMENTATION",
+  "parent_protocol": "RQ1_PHYSIOLOGICAL_HISTORY_VALUE_PROTOCOL.md",
+  "evidence_scope": "synthetic identifiability and sensitivity only; no human, military, clinical, or device-performance claim",
+  "sources": {
+    "pretask": "PRETASK_MODEL_PARAMETERS.json",
+    "longitudinal": "RQ1_LONGITUDINAL_V2_FINAL_PARAMETERS.json",
+    "task_capacity": "SIMULATOR_V23_TASK_CAPACITY_PARAMETERS.json",
+    "state_mixture": "RQ1_STATE_MIXTURE_PARAMETERS.json",
+    "empirical_reference": "artifacts/rq1_longitudinal_v2_calibration/calibration.json"
+  },
+  "seeds": [110, 220, 330, 440, 550],
+  "subjects": {
+    "total": 120,
+    "train": 72,
+    "validation": 24,
+    "test": 24,
+    "provenance": "INHERITED_METHOD_CHOICE",
+    "critical": true
+  },
+  "sessions": {
+    "calibration": 100,
+    "evaluation": 30,
+    "history_lengths": [0, 5, 10, 20, 30, 50, 75, 100],
+    "evaluation_session_identity_rule": "same subject/session set for all history lengths and feature conditions",
+    "provenance": "INHERITED_METHOD_CHOICE",
+    "critical": true
+  },
+  "task_design": {
+    "task_types": ["AEROBIC", "LOADED_MOVEMENT", "BODYWEIGHT_CIRCUIT"],
+    "planned_demand_levels": [0.7, 0.95, 1.2, 1.5],
+    "planned_duration_minutes": [20.0, 40.0, 60.0],
+    "assignment_rule": "reuse frozen PRETASK rotation; no latent capacity, tolerance, recovery, debt, or future outcome in assignment",
+    "independent_anchor": "observed_anchor available before assignment and supplied to every feature condition including k=0",
+    "provenance": "INHERITED_SIMULATION_DESIGN_NOT_HUMAN_PROTOCOL",
+    "critical": true
+  },
+  "observation_gap_days": {
+    "LOW": {
+      "rule": "resample frozen PMData wellness day-gap histogram and cap at 3 days"
+    },
+    "BASE": {
+      "rule": "resample frozen PMData wellness day-gap histogram without alteration"
+    },
+    "HIGH": {
+      "rule": "multiply resampled PMData wellness day gap by 3 and cap at 45 days"
+    },
+    "source": "artifacts/rq1_longitudinal_v2_calibration/calibration.json#observation_cadence_days.wellness.day_gap_counts",
+    "provenance": "EMPIRICAL_REFERENCE_PLUS_SIMULATION_SENSITIVITY",
+    "critical": true
+  },
+  "datasets": {
+    "NATURALISTIC": {
+      "capacity_dynamics_per_30_days": {
+        "LOW": {
+          "continuous_change_sd": 0.01,
+          "event_probability": 0.03,
+          "event_magnitude_sd": 0.03
+        },
+        "BASE": {
+          "continuous_change_sd": 0.02,
+          "event_probability": 0.07,
+          "event_magnitude_sd": 0.06
+        },
+        "HIGH": {
+          "continuous_change_sd": 0.04,
+          "event_probability": 0.15,
+          "event_magnitude_sd": 0.1
+        }
+      },
+      "event_time_rule": "subject-specific independent draw; never aligned to split or evaluation boundary",
+      "provenance": "INHERITED_SIMULATION_ASSUMPTION",
+      "critical": true
+    },
+    "CONTROLLED_CHANGE": {
+      "groups_per_seed": {
+        "IMPROVEMENT": 40,
+        "STABLE": 40,
+        "DECLINE": 40
+      },
+      "groups_per_split": {
+        "train": {
+          "IMPROVEMENT": 24,
+          "STABLE": 24,
+          "DECLINE": 24
+        },
+        "validation": {
+          "IMPROVEMENT": 8,
+          "STABLE": 8,
+          "DECLINE": 8
+        },
+        "test": {
+          "IMPROVEMENT": 8,
+          "STABLE": 8,
+          "DECLINE": 8
+        }
+      },
+      "discrete_event_boundary": "after calibration session 100 and before evaluation session 1",
+      "signed_log_capacity_shift": {
+        "LOW": 0.03,
+        "BASE": 0.06,
+        "HIGH": 0.1,
+        "IMPROVEMENT_sign": 1,
+        "STABLE_sign": 0,
+        "DECLINE_sign": -1
+      },
+      "continuous_change_sd_per_30_days": {
+        "LOW": 0.01,
+        "BASE": 0.02,
+        "HIGH": 0.04
+      },
+      "additional_random_discrete_events": false,
+      "evaluation_segments": {
+        "pre_event_reference": "calibration sessions 91-100; audit only, not final test endpoint",
+        "immediate_post_change": "evaluation sessions 1-5",
+        "adaptation_window": "evaluation sessions 6-15",
+        "late_post_change": "evaluation sessions 16-30"
+      },
+      "provenance": "METHOD_CHOICE_USING_EXISTING_EVENT_MAGNITUDE_FAMILY; NOT POPULATION ESTIMATE",
+      "critical": true
+    }
+  },
+  "subject_heterogeneity": {
+    "task_capacity": {
+      "capacity_log_sd": 0.28,
+      "cross_task_capacity_correlation": 0.45,
+      "source": "PRETASK_MODEL_PARAMETERS.json#subject",
+      "provenance": "INHERITED_SIMULATION_ASSUMPTION",
+      "critical": true
+    },
+    "physiological_response_sd_bpm": {
+      "LOW": 5.0,
+      "BASE": 10.0,
+      "HIGH": 15.0,
+      "source": "RQ1_LONGITUDINAL_V2_FINAL_PARAMETERS.json#physiology.subject_response_sd_bpm",
+      "provenance": "INHERITED_SIMULATION_ASSUMPTION",
+      "critical": true
+    },
+    "recovery_individual_log_sd": {
+      "LOW": 0.1,
+      "BASE": 0.2,
+      "HIGH": 0.3,
+      "source": "RQ1_LONGITUDINAL_V2_FINAL_PARAMETERS.json#recovery.individual_log_sd",
+      "provenance": "INHERITED_SIMULATION_ASSUMPTION",
+      "critical": true
+    },
+    "fast_recovery_time_constant_minutes": {
+      "LOW": 10.0,
+      "BASE": 30.0,
+      "HIGH": 60.0,
+      "provenance": "INHERITED_SIMULATION_ASSUMPTION",
+      "critical": true
+    },
+    "slow_recovery_time_constant_hours": {
+      "LOW": 12.0,
+      "BASE": 24.0,
+      "HIGH": 48.0,
+      "provenance": "INHERITED_SIMULATION_ASSUMPTION",
+      "critical": true
+    }
+  },
+  "physiology_and_measurement": {
+    "resting_hr_mean_bpm": 64.0,
+    "resting_hr_between_subject_sd_bpm": 7.0,
+    "temperature_mean_c": 36.65,
+    "temperature_between_subject_sd_c": 0.18,
+    "spo2_mean_pct": 97.5,
+    "spo2_between_subject_sd_pct": 0.7,
+    "provenance": "INHERITED_PROJECT_EMPIRICAL_REFERENCE_OR_SIMULATION_ASSUMPTION; NOT MILITARY POPULATION ESTIMATE",
+    "measurement_sensitivity": {
+      "LOW": {
+        "hr_sd_bpm": 1.5,
+        "temperature_sd_c": 0.06,
+        "spo2_sd_pct": 0.3,
+        "missing_probability": 0.02,
+        "artifact_probability": 0.03
+      },
+      "BASE": {
+        "hr_sd_bpm": 3.0,
+        "temperature_sd_c": 0.12,
+        "spo2_sd_pct": 0.6,
+        "missing_probability": 0.04,
+        "artifact_probability": 0.06
+      },
+      "HIGH": {
+        "hr_sd_bpm": 6.0,
+        "temperature_sd_c": 0.24,
+        "spo2_sd_pct": 1.2,
+        "missing_probability": 0.08,
+        "artifact_probability": 0.12
+      },
+      "rule": "BASE inherits PRETASK; LOW halves and HIGH doubles BASE magnitude/rate",
+      "provenance": "SIMULATION_SENSITIVITY_ASSUMPTION_NOT_DEVICE_SPEC",
+      "critical": true
+    },
+    "post_and_recovery_hr_measurement_rule": "apply the same sensor measurement, artifact, missingness, and quality process used for current HR; never expose true_hr-derived values directly",
+    "critical": true
+  },
+  "latent_state_and_task_outcome": {
+    "pretask_state_weights": {
+      "debt": 0.5,
+      "sleep": 0.25,
+      "stress": 0.15,
+      "unobserved": 0.1
+    },
+    "session_unobserved_sd": 0.18,
+    "relative_demand_threshold": 1.0,
+    "fatigue_capacity_penalty": 0.3,
+    "behavioral_stop_log_sd": 0.1,
+    "post_burden_weights": {
+      "relative_demand": 0.3,
+      "duration": 0.2,
+      "pre_fatigue": 0.2,
+      "depletion": 0.2,
+      "unobserved": 0.1
+    },
+    "recovery_delay_base_hours": 4.0,
+    "recovery_delay_burden_gain_hours": 28.0,
+    "provenance": "INHERITED_PRETASK_SIMULATION_ASSUMPTION",
+    "critical": true
+  },
+  "reporting_process_secondary_only": {
+    "stable_bias_sd_points": {
+      "LOW": 0.3,
+      "BASE": 0.55,
+      "HIGH": 0.8
+    },
+    "drift_sd_per_30_days": {
+      "LOW": 0.03,
+      "BASE": 0.07,
+      "HIGH": 0.12
+    },
+    "shift_probability_per_30_days": {
+      "LOW": 0.03,
+      "BASE": 0.08,
+      "HIGH": 0.15
+    },
+    "shift_sd_points": {
+      "LOW": 0.25,
+      "BASE": 0.5,
+      "HIGH": 0.8
+    },
+    "session_noise_sd_points": {
+      "LOW": 0.2,
+      "BASE": 0.35,
+      "HIGH": 0.6
+    },
+    "provenance": "INHERITED_SIMULATION_ASSUMPTION",
+    "critical": false,
+    "role": "secondary observed-self-report comparison only; never primary physiological-history success criterion"
+  },
+  "history_features": {
+    "recency": {
+      "record_counts": [0, 5, 10, 20, 30, 50, 75, 100],
+      "calendar_windows_days": [30, 90],
+      "ewma_half_life_days": 30
+    },
+    "required_observed_groups": [
+      "resting or pretask sensor baseline",
+      "workload-conditioned sensor response",
+      "actual duration and completion",
+      "observed stop time only when stopped",
+      "measured recovery response",
+      "recovery interval",
+      "time-ordered independent performance anchor"
+    ],
+    "past_self_report_in_primary": false,
+    "past_self_report_in_secondary_C6_C7_only": true,
+    "provenance": "PREREGISTERED_METHOD_CHOICE",
+    "critical": true
+  },
+  "models": {
+    "continuous_primary": {
+      "type": "Ridge",
+      "alpha_candidates": [1.0, 10.0, 100.0]
+    },
+    "completion_primary": {
+      "type": "L2_logistic_regression",
+      "C_candidates": [0.1, 1.0, 10.0]
+    },
+    "censored_stop_time": {
+      "type": "log_normal_AFT_L2",
+      "alpha_candidates": [0.1, 1.0, 10.0],
+      "selection_metric": "validation censored negative log likelihood",
+      "reporting": ["Harrell_C", "calibration_by_time", "IPCW_MAE_when_estimable"]
+    },
+    "nonlinear_audit_probe": {
+      "type": "RandomForest",
+      "n_estimators": 300,
+      "max_depth_candidates": [6, null],
+      "min_samples_leaf_candidates": [5, 10],
+      "max_features": "sqrt",
+      "random_state_rule": "final seed",
+      "role": "audit only; does not replace primary linear model"
+    },
+    "preprocessing_fit": "train_only",
+    "selection": "validation_only",
+    "critical": true
+  },
+  "success_thresholds": {
+    "continuous_minimum_mae_improvement_points": 0.02,
+    "required_seed_direction": "5_of_5",
+    "paired_ci_rule": "95_percent_CI_excludes_zero",
+    "falsification_loss_fraction": 0.5,
+    "role": "method decision threshold, not clinical importance threshold"
+  },
+  "unknown_not_claimed": [
+    "military population distribution of longitudinal fitness change",
+    "military task-specific capacity and recovery distributions",
+    "device-specific measurement-error and artifact distributions",
+    "actual repeat reliability of the subjective targets",
+    "actual physiological-state ground truth",
+    "actual rates and causes of voluntary or safety stopping",
+    "session-level environmental exposure effects"
+  ],
+  "freeze_rules": {
+    "report_all_critical_LOW_BASE_HIGH_conditions": true,
+    "no_post_result_parameter_adjustment": true,
+    "no_latent_predictor_input": true,
+    "no_current_or_future_target_input": true,
+    "no_human_or_military_population_claim": true,
+    "no_device_accuracy_claim": true
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "k0_exactly_reproduces_frozen_phase1": true,
+  "same_test_sessions_all_k": true,
+  "train_only_workload_cell_reference": "implemented; leave-one-subject-out for train",
+  "evaluation_target_as_input": false,
+  "generator_or_parameter_changed": false
+}

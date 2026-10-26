@@ -1,0 +1,148 @@
+{
+  "version": "rq1-longitudinal-v2-final-parameters-01",
+  "status": "PREREGISTERED_NO_V2_IMPLEMENTATION_OR_RESULT",
+  "seeds": [110, 220, 330, 440, 550],
+  "subjects": {"total": 120, "train": 72, "validation": 24, "test": 24},
+  "history_lengths": [0, 5, 10, 20, 30, 50, 75, 100],
+  "target_evaluation_events_per_subject": 30,
+  "activity_support_design": {
+    "categories": ["NONE", "AEROBIC", "LOADED_MOVEMENT", "BODYWEIGHT_CIRCUIT"],
+    "probabilities": [0.25, 0.25, 0.25, 0.25],
+    "provenance": "METHOD_CHOICE_CONTROLLED_SUPPORT_NOT_POPULATION_PREVALENCE",
+    "critical": true
+  },
+  "observation_interval": {
+    "LOW": {"rule": "resample frozen PMData wellness day-gap histogram then cap at 3 days"},
+    "BASE": {"rule": "resample frozen PMData wellness day-gap histogram without alteration"},
+    "HIGH": {"rule": "three times a resampled PMData wellness day gap, capped at 45 days"},
+    "source": "artifacts/rq1_longitudinal_v2_calibration/calibration.json#observation_cadence_days.wellness.day_gap_counts",
+    "provenance": "EMPIRICAL_REFERENCE_PLUS_SIMULATION_SENSITIVITY",
+    "critical": true
+  },
+  "aerobic_activity": {
+    "capacity_anchor": "independent 5 km record; not CS",
+    "external_demand_multipliers_of_v5": [0.7, 0.9, 1.1],
+    "duration_minutes": [29.558333333333334, 44.85, 67.71666666666667],
+    "duration_basis": "PMData Fitbit running q25/median/q75",
+    "provenance": "EMPIRICAL_REFERENCE_AND_METHOD_CHOICE",
+    "critical": true
+  },
+  "loaded_movement": {
+    "source": "SIMULATOR_V22_MULTI_ACTIVITY_PARAMETERS.json#loaded_march",
+    "rule": "reuse frozen calibration/evaluation grids and demand function without recalibration",
+    "provenance": "LITERATURE_BOUNDED_EXISTING_SIMULATION_GRID_NOT_HUMAN_PROTOCOL",
+    "critical": true
+  },
+  "bodyweight_circuit": {
+    "source": "SIMULATOR_V22_MULTI_ACTIVITY_PARAMETERS.json#bodyweight_circuit",
+    "rule": "reuse frozen calibration/evaluation grids and demand function without recalibration",
+    "provenance": "LITERATURE_BOUNDED_EXISTING_SIMULATION_GRID_NOT_HUMAN_PROTOCOL",
+    "critical": true
+  },
+  "capacity_population_reference": {
+    "normalized_quantiles": {"p05": 0.700956878339754, "p10": 0.758543556604946, "p50": 1.0, "p90": 1.3415682863178824, "p95": 1.4762520193861064},
+    "source": "SIMULATOR_V23_TASK_CAPACITY_PARAMETERS.json",
+    "provenance": "EMPIRICAL_REFERENCE_NOT_MILITARY_POPULATION",
+    "critical": true
+  },
+  "task_capacity": {
+    "shared_aerobic_loading": {"LOW": 0.25, "BASE": 0.5, "HIGH": 0.75},
+    "task_specific_log_sd": {"LOW": 0.1, "BASE": 0.2, "HIGH": 0.3},
+    "cross_task_residual_correlation": {"LOW": 0.0, "BASE": 0.25, "HIGH": 0.5},
+    "provenance": "SIMULATION_ASSUMPTION",
+    "critical": true
+  },
+  "capacity_dynamics_per_30_days": {
+    "LOW": {"continuous_change_sd": 0.01, "event_probability": 0.03, "event_magnitude_sd": 0.03},
+    "BASE": {"continuous_change_sd": 0.02, "event_probability": 0.07, "event_magnitude_sd": 0.06},
+    "HIGH": {"continuous_change_sd": 0.04, "event_probability": 0.15, "event_magnitude_sd": 0.1},
+    "event_time_rule": "subject-specific independent draw; never aligned to split or evaluation boundary",
+    "provenance": "SIMULATION_ASSUMPTION",
+    "critical": true
+  },
+  "recovery": {
+    "fast_time_constant_minutes": {"LOW": 10.0, "BASE": 30.0, "HIGH": 60.0},
+    "slow_time_constant_hours": {"LOW": 12.0, "BASE": 24.0, "HIGH": 48.0},
+    "individual_log_sd": {"LOW": 0.1, "BASE": 0.2, "HIGH": 0.3},
+    "provenance": "SIMULATION_ASSUMPTION",
+    "critical": true
+  },
+  "physiology": {
+    "resting_hr_reference": "artifacts/simulator_v2_calibration_v1/calibration.json#parameters.P01",
+    "hr_gain_bpm": {"LOW": 60.0, "BASE": 80.0, "HIGH": 100.0},
+    "subject_response_sd_bpm": {"LOW": 5.0, "BASE": 10.0, "HIGH": 15.0},
+    "physiology_sd_bpm": {"LOW": 3.0, "BASE": 5.0, "HIGH": 8.0},
+    "measurement_sd_bpm": {"LOW": 2.0, "BASE": 4.0, "HIGH": 6.0},
+    "provenance": "EMPIRICAL_BASELINE_REFERENCE_PLUS_SIMULATION_ASSUMPTIONS",
+    "critical": true
+  },
+  "measurement_process": {
+    "hr_sd_bpm": 2.5,
+    "temperature_sd_c": 0.12,
+    "spo2_sd_pct": 0.55,
+    "artifact_probability": 0.08,
+    "missing_probability": 0.04,
+    "sweat_lactate_in_v2_minimal": false,
+    "source": "RQ1_STATE_MIXTURE_PARAMETERS.json",
+    "provenance": "SIMULATION_ASSUMPTION_NOT_DEVICE_SPEC",
+    "critical": true
+  },
+  "environment": {
+    "v2_minimal": "NEUTRAL_FIXED",
+    "v2_extended": "DEFERRED_NEEDS_SESSION_LEVEL_EXPOSURE_SOURCE",
+    "provenance": "SCOPE_RESTRICTION_NOT_NO_EFFECT_CLAIM",
+    "critical": false
+  },
+  "latent_state": {
+    "strain_weights_relative_duration_depletion_debt_unobserved": [0.3, 0.15, 0.25, 0.2, 0.1],
+    "slow_debt_gain": {"LOW": 0.3, "BASE": 0.5, "HIGH": 0.7},
+    "source": "SIMULATOR_V23_TASK_CAPACITY_PARAMETERS.json",
+    "provenance": "SIMULATION_ASSUMPTION",
+    "critical": true
+  },
+  "targets": {
+    "burden_coupling": {
+      "WEAK": [0.1, 0.1, 0.15, 0.15, 0.5],
+      "BASE": [0.25, 0.2, 0.2, 0.15, 0.2],
+      "STRONG": [0.35, 0.25, 0.2, 0.1, 0.1],
+      "order": ["relative_demand", "reserve_depletion", "strain", "prior_debt", "unobserved_target_factor"]
+    },
+    "fatigue_weights": [0.15, 0.25, 0.25, 0.25, 0.1],
+    "condition_weights": [0.2, 0.2, 0.25, 0.25, 0.1],
+    "score_map": {"offset": 2.0, "scale": 6.0, "clip": [0.0, 10.0]},
+    "personal_bias_sd_points": {"LOW": 0.3, "BASE": 0.5, "HIGH": 0.8},
+    "occasion_error_sd_points": {"LOW": 0.4, "BASE": 0.8, "HIGH": 1.2},
+    "source": "SIMULATOR_V23_TASK_CAPACITY_PARAMETERS.json",
+    "provenance": "SIMULATION_ASSUMPTION",
+    "critical": true
+  },
+  "reporting_process": {
+    "LOW": {"stable_bias_sd": 0.3, "drift_sd_per_30_days": 0.03, "shift_probability_per_30_days": 0.03, "shift_sd": 0.25, "session_noise_sd": 0.2},
+    "BASE": {"stable_bias_sd": 0.55, "drift_sd_per_30_days": 0.07, "shift_probability_per_30_days": 0.08, "shift_sd": 0.5, "session_noise_sd": 0.35},
+    "HIGH": {"stable_bias_sd": 0.8, "drift_sd_per_30_days": 0.12, "shift_probability_per_30_days": 0.15, "shift_sd": 0.8, "session_noise_sd": 0.6},
+    "shift_time_rule": "subject-specific independent draw; never aligned to split or evaluation boundary",
+    "provenance": "SIMULATION_ASSUMPTION",
+    "critical": true
+  },
+  "history_recency": {
+    "calendar_windows_days": [30, 90],
+    "ewma_half_life_days": 30,
+    "provenance": "METHOD_CHOICE",
+    "critical": true
+  },
+  "model": {"type": "Ridge", "alphas": [1.0, 10.0, 100.0], "selection": "validation_only", "preprocessing_fit": "train_only"},
+  "unknown_not_claimed": [
+    "military population activity prevalence",
+    "military task-specific capacity distribution",
+    "device-specific measurement error distribution",
+    "standardized repeat-test reliability for the three subjective targets",
+    "session-level environmental exposure effects",
+    "paired sweat lactate response"
+  ],
+  "freeze_rules": {
+    "all_critical_sensitivity_families_reported": true,
+    "no_post_result_parameter_adjustment": true,
+    "no_human_or_military_population_claim": true,
+    "no_device_accuracy_claim": true
+  }
+}

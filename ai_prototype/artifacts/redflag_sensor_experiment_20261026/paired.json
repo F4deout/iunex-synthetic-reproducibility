@@ -1,0 +1,4322 @@
+[
+  {
+    "case": "CLEAN",
+    "group": "ALL",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.5651738075292406,
+      "sd": 0.016720792089455365,
+      "ci95": [
+        0.5589301611515817,
+        0.5714174539068996
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "ALL",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.5632748607162664,
+      "sd": 0.016861086693538436,
+      "ci95": [
+        0.5569788274724888,
+        0.569570893960044
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "ALL",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.5651738075292406,
+      "sd": 0.016720792089455365,
+      "ci95": [
+        0.5589301611515817,
+        0.5714174539068996
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "ALL",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": -0.0030807702868059185,
+      "sd": 0.005441694653051123,
+      "ci95": [
+        -0.0051127324646189475,
+        -0.001048808108992889
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "ALL",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": -0.0030807702868059185,
+      "sd": 0.005441694653051123,
+      "ci95": [
+        -0.0051127324646189475,
+        -0.001048808108992889
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "ALL",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": -0.0030807702868059185,
+      "sd": 0.005441694653051123,
+      "ci95": [
+        -0.0051127324646189475,
+        -0.001048808108992889
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "ALL",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": -0.5651738075292406,
+      "sd": 0.01672079208945538,
+      "ci95": [
+        -0.5714174539068996,
+        -0.5589301611515817
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "ALL",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": -0.5632748607162664,
+      "sd": 0.01686108669353844,
+      "ci95": [
+        -0.569570893960044,
+        -0.5569788274724888
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "ALL",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": -0.5651738075292406,
+      "sd": 0.01672079208945538,
+      "ci95": [
+        -0.5714174539068996,
+        -0.5589301611515817
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "high_temperature",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.9966336711690783,
+      "sd": 0.0075821122163246685,
+      "ci95": [
+        0.9938024639379142,
+        0.9994648784002425
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "high_temperature",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.9966336711690783,
+      "sd": 0.0075821122163246685,
+      "ci95": [
+        0.9938024639379142,
+        0.9994648784002425
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "high_temperature",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.9966336711690783,
+      "sd": 0.0075821122163246685,
+      "ci95": [
+        0.9938024639379142,
+        0.9994648784002425
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "high_temperature",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "high_temperature",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "high_temperature",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "high_temperature",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": -0.9966336711690783,
+      "sd": 0.0075821122163246685,
+      "ci95": [
+        -0.9994648784002425,
+        -0.9938024639379142
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "high_temperature",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": -0.9966336711690783,
+      "sd": 0.0075821122163246685,
+      "ci95": [
+        -0.9994648784002425,
+        -0.9938024639379142
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "high_temperature",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": -0.9966336711690783,
+      "sd": 0.0075821122163246685,
+      "ci95": [
+        -0.9994648784002425,
+        -0.9938024639379142
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "low_temperature",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.9971406448890262,
+      "sd": 0.005800903347921209,
+      "ci95": [
+        0.9949745519801718,
+        0.9993067377978806
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "low_temperature",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.9971406448890262,
+      "sd": 0.005800903347921209,
+      "ci95": [
+        0.9949745519801718,
+        0.9993067377978806
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "low_temperature",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.9971406448890262,
+      "sd": 0.005800903347921209,
+      "ci95": [
+        0.9949745519801718,
+        0.9993067377978806
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "low_temperature",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "low_temperature",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "low_temperature",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "low_temperature",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": -0.9971406448890262,
+      "sd": 0.005800903347921209,
+      "ci95": [
+        -0.9993067377978806,
+        -0.9949745519801718
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "low_temperature",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": -0.9971406448890262,
+      "sd": 0.005800903347921209,
+      "ci95": [
+        -0.9993067377978806,
+        -0.9949745519801718
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "low_temperature",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": -0.9971406448890262,
+      "sd": 0.005800903347921209,
+      "ci95": [
+        -0.9993067377978806,
+        -0.9949745519801718
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "low_spo2",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.9977913815860443,
+      "sd": 0.003990401600839008,
+      "ci95": [
+        0.9963013411401617,
+        0.9992814220319269
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "low_spo2",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.9977913815860443,
+      "sd": 0.003990401600839008,
+      "ci95": [
+        0.9963013411401617,
+        0.9992814220319269
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "low_spo2",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.9977913815860443,
+      "sd": 0.003990401600839008,
+      "ci95": [
+        0.9963013411401617,
+        0.9992814220319269
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "low_spo2",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "low_spo2",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "low_spo2",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "low_spo2",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": -0.9977913815860443,
+      "sd": 0.003990401600839008,
+      "ci95": [
+        -0.9992814220319269,
+        -0.9963013411401617
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "low_spo2",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": -0.9977913815860443,
+      "sd": 0.003990401600839008,
+      "ci95": [
+        -0.9992814220319269,
+        -0.9963013411401617
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "low_spo2",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": -0.9977913815860443,
+      "sd": 0.003990401600839008,
+      "ci95": [
+        -0.9992814220319269,
+        -0.9963013411401617
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "low_hr",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "low_hr",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": -0.0109449005569952,
+      "sd": 0.008319112758101863,
+      "ci95": [
+        -0.01405130831325304,
+        -0.00783849280073736
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "low_hr",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "low_hr",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "low_hr",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "low_hr",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "low_hr",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "low_hr",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.010944900556995207,
+      "sd": 0.00831911275810186,
+      "ci95": [
+        0.00783849280073737,
+        0.014051308313253045
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "low_hr",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "high_hr",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "high_hr",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "high_hr",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "high_hr",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "high_hr",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "high_hr",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "high_hr",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "high_hr",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "high_hr",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "mixed",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.3388460295889996,
+      "sd": 0.03814359408272604,
+      "ci95": [
+        0.32460297748049977,
+        0.3530890816974995
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "mixed",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.3388460295889996,
+      "sd": 0.03814359408272604,
+      "ci95": [
+        0.32460297748049977,
+        0.3530890816974995
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "mixed",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.3388460295889996,
+      "sd": 0.03814359408272604,
+      "ci95": [
+        0.32460297748049977,
+        0.3530890816974995
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "mixed",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "mixed",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "mixed",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "mixed",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": -0.3388460295889997,
+      "sd": 0.03814359408272602,
+      "ci95": [
+        -0.35308908169749953,
+        -0.3246029774804998
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "mixed",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": -0.3388460295889997,
+      "sd": 0.03814359408272602,
+      "ci95": [
+        -0.35308908169749953,
+        -0.3246029774804998
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "mixed",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": -0.3388460295889997,
+      "sd": 0.03814359408272602,
+      "ci95": [
+        -0.35308908169749953,
+        -0.3246029774804998
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "temperature_40_plus",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.82719911038013,
+      "sd": 0.03506399338232466,
+      "ci95": [
+        0.8141060000719246,
+        0.8402922206883355
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "temperature_40_plus",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.82719911038013,
+      "sd": 0.03506399338232466,
+      "ci95": [
+        0.8141060000719246,
+        0.8402922206883355
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "temperature_40_plus",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.82719911038013,
+      "sd": 0.03506399338232466,
+      "ci95": [
+        0.8141060000719246,
+        0.8402922206883355
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "temperature_40_plus",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "temperature_40_plus",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "temperature_40_plus",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "temperature_40_plus",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": -0.82719911038013,
+      "sd": 0.03506399338232465,
+      "ci95": [
+        -0.8402922206883355,
+        -0.8141060000719246
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "temperature_40_plus",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": -0.82719911038013,
+      "sd": 0.03506399338232465,
+      "ci95": [
+        -0.8402922206883355,
+        -0.8141060000719246
+      ]
+    }
+  },
+  {
+    "case": "CLEAN",
+    "group": "temperature_40_plus",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": -0.82719911038013,
+      "sd": 0.03506399338232465,
+      "ci95": [
+        -0.8402922206883355,
+        -0.8141060000719246
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "ALL",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.5169176183958858,
+      "sd": 0.015212320871277274,
+      "ci95": [
+        0.5112372444282175,
+        0.5225979923635541
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "ALL",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.44019296903270605,
+      "sd": 0.017058936198388438,
+      "ci95": [
+        0.43382305756966294,
+        0.44656288049574916
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "ALL",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.5170622325742814,
+      "sd": 0.01523917417944158,
+      "ci95": [
+        0.5113718314165523,
+        0.5227526337320105
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "ALL",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": -0.012947101386797232,
+      "sd": 0.012488485667717368,
+      "ci95": [
+        -0.017610378573938476,
+        -0.008283824199655988
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "ALL",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": -0.04981907387309393,
+      "sd": 0.006859522515692613,
+      "ci95": [
+        -0.052380461675683915,
+        -0.04725768607050394
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "ALL",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": -0.012947101386797232,
+      "sd": 0.012488485667717368,
+      "ci95": [
+        -0.017610378573938476,
+        -0.008283824199655988
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "ALL",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": -0.5169176183958859,
+      "sd": 0.015212320871277277,
+      "ci95": [
+        -0.5225979923635542,
+        -0.5112372444282176
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "ALL",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": -0.5291526910233172,
+      "sd": 0.017123631496046836,
+      "ci95": [
+        -0.5355467601075253,
+        -0.522758621939109
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "ALL",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": -0.5449005988661211,
+      "sd": 0.015463053084278158,
+      "ci95": [
+        -0.5506745977808069,
+        -0.5391265999514353
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "high_temperature",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.931942351377172,
+      "sd": 0.02017236842939013,
+      "ci95": [
+        0.9244098652126923,
+        0.9394748375416516
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "high_temperature",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.8645521539553631,
+      "sd": 0.02775825409731518,
+      "ci95": [
+        0.854187051529735,
+        0.8749172563809913
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "high_temperature",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.9326226605666743,
+      "sd": 0.020483279734608697,
+      "ci95": [
+        0.9249740782128386,
+        0.94027124292051
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "high_temperature",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "high_temperature",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "high_temperature",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "high_temperature",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": -0.931942351377172,
+      "sd": 0.02017236842939012,
+      "ci95": [
+        -0.9394748375416516,
+        -0.9244098652126923
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "high_temperature",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": -0.9583842228328138,
+      "sd": 0.01657346050723129,
+      "ci95": [
+        -0.9645728546935319,
+        -0.9521955909720956
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "high_temperature",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": -0.9583842228328138,
+      "sd": 0.01657346050723129,
+      "ci95": [
+        -0.9645728546935319,
+        -0.9521955909720956
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "low_temperature",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.9228478667464386,
+      "sd": 0.02032174965220395,
+      "ci95": [
+        0.9152596007166438,
+        0.9304361327762334
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "low_temperature",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.8521719241472255,
+      "sd": 0.02573670015177321,
+      "ci95": [
+        0.8425616823706503,
+        0.8617821659238007
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "low_temperature",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.9228478667464386,
+      "sd": 0.02032174965220395,
+      "ci95": [
+        0.9152596007166438,
+        0.9304361327762334
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "low_temperature",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "low_temperature",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "low_temperature",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "low_temperature",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": -0.9228478667464386,
+      "sd": 0.020321749652203958,
+      "ci95": [
+        -0.9304361327762334,
+        -0.9152596007166438
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "low_temperature",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": -0.9519441527547734,
+      "sd": 0.01603106643462033,
+      "ci95": [
+        -0.9579302513402375,
+        -0.9459580541693093
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "low_temperature",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": -0.9532292051520066,
+      "sd": 0.01528035290673393,
+      "ci95": [
+        -0.9589349826992105,
+        -0.9475234276048027
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "low_spo2",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.9117131437987458,
+      "sd": 0.015518602408355838,
+      "ci95": [
+        0.9059184024255567,
+        0.9175078851719349
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "low_spo2",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.8453509201091093,
+      "sd": 0.021197005636549273,
+      "ci95": [
+        0.8374358281235258,
+        0.8532660120946928
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "low_spo2",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.9117131437987458,
+      "sd": 0.015518602408355838,
+      "ci95": [
+        0.9059184024255567,
+        0.9175078851719349
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "low_spo2",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "low_spo2",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "low_spo2",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "low_spo2",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": -0.9117131437987458,
+      "sd": 0.015518602408355843,
+      "ci95": [
+        -0.9175078851719349,
+        -0.9059184024255567
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "low_spo2",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": -0.9473223220978982,
+      "sd": 0.01521942446488012,
+      "ci95": [
+        -0.9530053485910108,
+        -0.9416392956047857
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "low_spo2",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": -0.952213335897238,
+      "sd": 0.01354723685726217,
+      "ci95": [
+        -0.9572719572758552,
+        -0.9471547145186208
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "low_hr",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": -0.022730063577908313,
+      "sd": 0.016161571575748424,
+      "ci95": [
+        -0.028764893583948053,
+        -0.016695233571868574
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "low_hr",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": -0.1825405872588549,
+      "sd": 0.02715122423147705,
+      "ci95": [
+        -0.19267902100738368,
+        -0.17240215351032614
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "low_hr",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": -0.022730063577908313,
+      "sd": 0.016161571575748424,
+      "ci95": [
+        -0.028764893583948053,
+        -0.016695233571868574
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "low_hr",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "low_hr",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "low_hr",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "low_hr",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.0227300635779083,
+      "sd": 0.016161571575748424,
+      "ci95": [
+        0.01669523357186856,
+        0.02876489358394804
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "low_hr",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.07138030076338953,
+      "sd": 0.02340677261477766,
+      "ci95": [
+        0.0626400682273301,
+        0.08012053329944895
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "low_hr",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": -0.012295685510390012,
+      "sd": 0.01130881276548365,
+      "ci95": [
+        -0.016518465596469946,
+        -0.008072905424310077
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "high_hr",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": -0.021000866017213023,
+      "sd": 0.012858043536861673,
+      "ci95": [
+        -0.025802138380579997,
+        -0.01619959365384605
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "high_hr",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": -0.08837174855801785,
+      "sd": 0.019300599109060613,
+      "ci95": [
+        -0.095578710708449,
+        -0.0811647864075867
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "high_hr",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": -0.020842135858482866,
+      "sd": 0.012851566363020235,
+      "ci95": [
+        -0.0256409896053886,
+        -0.016043282111577132
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "high_hr",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "high_hr",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "high_hr",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "high_hr",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.02100086601721302,
+      "sd": 0.012858043536861666,
+      "ci95": [
+        0.01619959365384605,
+        0.02580213838057999
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "high_hr",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": -0.005776743815508693,
+      "sd": 0.007271723124529411,
+      "ci95": [
+        -0.008492049855013761,
+        -0.003061437776003625
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "high_hr",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": -0.006615685067985918,
+      "sd": 0.00721721363669046,
+      "ci95": [
+        -0.00931063693022038,
+        -0.003920733205751455
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "mixed",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.3288227839394841,
+      "sd": 0.035116476360171726,
+      "ci95": [
+        0.31571007616527524,
+        0.341935491713693
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "mixed",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.3176321345694934,
+      "sd": 0.0351693611924504,
+      "ci95": [
+        0.30449967927437027,
+        0.33076458986461654
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "mixed",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.3288227839394841,
+      "sd": 0.035116476360171726,
+      "ci95": [
+        0.31571007616527524,
+        0.341935491713693
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "mixed",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "mixed",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "mixed",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "mixed",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": -0.3288227839394841,
+      "sd": 0.035116476360171726,
+      "ci95": [
+        -0.341935491713693,
+        -0.31571007616527524
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "mixed",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": -0.3288227839394841,
+      "sd": 0.035116476360171726,
+      "ci95": [
+        -0.341935491713693,
+        -0.31571007616527524
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "mixed",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": -0.3288227839394841,
+      "sd": 0.035116476360171726,
+      "ci95": [
+        -0.341935491713693,
+        -0.31571007616527524
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "temperature_40_plus",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.7755030021431886,
+      "sd": 0.04525426606052097,
+      "ci95": [
+        0.7586047814817062,
+        0.792401222804671
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "temperature_40_plus",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.729652926120177,
+      "sd": 0.050743744167256646,
+      "ci95": [
+        0.7107049006460403,
+        0.7486009515943136
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "temperature_40_plus",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.7755030021431886,
+      "sd": 0.04525426606052097,
+      "ci95": [
+        0.7586047814817062,
+        0.792401222804671
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "temperature_40_plus",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "temperature_40_plus",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "temperature_40_plus",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "temperature_40_plus",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": -0.7755030021431886,
+      "sd": 0.04525426606052098,
+      "ci95": [
+        -0.792401222804671,
+        -0.7586047814817062
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "temperature_40_plus",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": -0.7904730028706185,
+      "sd": 0.043155036014458276,
+      "ci95": [
+        -0.806587358150434,
+        -0.774358647590803
+      ]
+    }
+  },
+  {
+    "case": "BASE",
+    "group": "temperature_40_plus",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": -0.7904730028706185,
+      "sd": 0.043155036014458276,
+      "ci95": [
+        -0.806587358150434,
+        -0.774358647590803
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "ALL",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.4954813080398074,
+      "sd": 0.019580756561237818,
+      "ci95": [
+        0.48816973337747477,
+        0.5027928827021401
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "ALL",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.3972870198187686,
+      "sd": 0.022375145500732337,
+      "ci95": [
+        0.3889320031779398,
+        0.40564203645959745
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "ALL",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.4961171076827125,
+      "sd": 0.01968129282762129,
+      "ci95": [
+        0.48876799216154554,
+        0.5034662232038795
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "ALL",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.02636887443475905,
+      "sd": 0.019135384413353093,
+      "ci95": [
+        0.019223604465587706,
+        0.03351414440393039
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "ALL",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": -0.07237462955959026,
+      "sd": 0.012594297505050778,
+      "ci95": [
+        -0.07707741753613345,
+        -0.06767184158304707
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "ALL",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.026408217986038707,
+      "sd": 0.019131227436829178,
+      "ci95": [
+        0.019264500257411755,
+        0.03355193571466566
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "ALL",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": -0.49548130803980733,
+      "sd": 0.019580756561237832,
+      "ci95": [
+        -0.50279288270214,
+        -0.4881697333774747
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "ALL",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": -0.4912119737713028,
+      "sd": 0.022606315997723263,
+      "ci95": [
+        -0.4996533108943455,
+        -0.48277063664826014
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "ALL",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": -0.5264615388402305,
+      "sd": 0.019926005376166695,
+      "ci95": [
+        -0.533902031528766,
+        -0.519021046151695
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "high_temperature",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.8946731672154544,
+      "sd": 0.018538282238899823,
+      "ci95": [
+        0.8877508588624955,
+        0.9015954755684134
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "high_temperature",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.829578235251989,
+      "sd": 0.0283430991244976,
+      "ci95": [
+        0.8189947481041585,
+        0.8401617223998196
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "high_temperature",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.8968984665872041,
+      "sd": 0.019373753465417056,
+      "ci95": [
+        0.8896641881511789,
+        0.9041327450232293
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "high_temperature",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "high_temperature",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "high_temperature",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "high_temperature",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": -0.8946731672154544,
+      "sd": 0.018538282238899823,
+      "ci95": [
+        -0.9015954755684134,
+        -0.8877508588624955
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "high_temperature",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": -0.9232725602764148,
+      "sd": 0.021296571959776467,
+      "ci95": [
+        -0.9312248309381058,
+        -0.9153202896147238
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "high_temperature",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": -0.9237868696433913,
+      "sd": 0.02137328786202396,
+      "ci95": [
+        -0.9317677864937685,
+        -0.9158059527930141
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "low_temperature",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.8881537330391585,
+      "sd": 0.02585842423621916,
+      "ci95": [
+        0.8784980387424598,
+        0.8978094273358571
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "low_temperature",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.8106023446539973,
+      "sd": 0.03017278247539663,
+      "ci95": [
+        0.7993356425146169,
+        0.8218690467933777
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "low_temperature",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.8891210227587846,
+      "sd": 0.025361035953817383,
+      "ci95": [
+        0.8796510562990864,
+        0.8985909892184828
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "low_temperature",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "low_temperature",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "low_temperature",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "low_temperature",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": -0.8881537330391585,
+      "sd": 0.025858424236219157,
+      "ci95": [
+        -0.8978094273358571,
+        -0.8784980387424598
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "low_temperature",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": -0.9105454329361874,
+      "sd": 0.025699285596575742,
+      "ci95": [
+        -0.9201417038882478,
+        -0.900949161984127
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "low_temperature",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": -0.9204909472487255,
+      "sd": 0.021252456749966675,
+      "ci95": [
+        -0.9284267450203492,
+        -0.9125551494771018
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "low_spo2",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.8594353000173593,
+      "sd": 0.0261435537619607,
+      "ci95": [
+        0.8496731366059779,
+        0.8691974634287408
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "low_spo2",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.783334563659179,
+      "sd": 0.032635148307110534,
+      "ci95": [
+        0.7711483990072932,
+        0.7955207283110648
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "low_spo2",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.8594353000173593,
+      "sd": 0.0261435537619607,
+      "ci95": [
+        0.8496731366059779,
+        0.8691974634287408
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "low_spo2",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "low_spo2",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "low_spo2",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "low_spo2",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": -0.8594353000173593,
+      "sd": 0.026143553761960703,
+      "ci95": [
+        -0.8691974634287408,
+        -0.8496731366059779
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "low_spo2",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": -0.8892506214228896,
+      "sd": 0.02894214939584621,
+      "ci95": [
+        -0.9000577976182683,
+        -0.8784434452275108
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "low_spo2",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": -0.9056319452522658,
+      "sd": 0.025095475107221873,
+      "ci95": [
+        -0.9150027496621626,
+        -0.896261140842369
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "low_hr",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": -0.01597041212197407,
+      "sd": 0.02545363966681268,
+      "ci95": [
+        -0.025474957376391327,
+        -0.006465866867556812
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "low_hr",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": -0.2694994355001808,
+      "sd": 0.040195828584984716,
+      "ci95": [
+        -0.2845088045658907,
+        -0.25449006643447086
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "low_hr",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": -0.01597041212197407,
+      "sd": 0.02545363966681268,
+      "ci95": [
+        -0.025474957376391327,
+        -0.006465866867556812
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "low_hr",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "low_hr",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "low_hr",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "low_hr",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.01597041212197407,
+      "sd": 0.02545363966681267,
+      "ci95": [
+        0.006465866867556817,
+        0.02547495737639132
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "low_hr",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.1381880357859425,
+      "sd": 0.03633400755064125,
+      "ci95": [
+        0.1246206943935179,
+        0.15175537717836707
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "low_hr",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": -0.024080508579146467,
+      "sd": 0.021959513253359014,
+      "ci95": [
+        -0.03228032558817155,
+        -0.01588069157012138
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "high_hr",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": -0.01933363589027447,
+      "sd": 0.013247255818259208,
+      "ci95": [
+        -0.024280242508016907,
+        -0.014387029272532036
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "high_hr",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": -0.1007273951545687,
+      "sd": 0.022603271235276924,
+      "ci95": [
+        -0.10916759534462894,
+        -0.09228719496450846
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "high_hr",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": -0.018857445414083993,
+      "sd": 0.01261414439706326,
+      "ci95": [
+        -0.02356764434190022,
+        -0.014147246486267768
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "high_hr",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "high_hr",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "high_hr",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "high_hr",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.01933363589027446,
+      "sd": 0.013247255818259205,
+      "ci95": [
+        0.014387029272532027,
+        0.024280242508016893
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "high_hr",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.003616987103537398,
+      "sd": 0.010525963896516445,
+      "ci95": [
+        -0.00031347241071604534,
+        0.007547446617790842
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "high_hr",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": -0.009952668864532182,
+      "sd": 0.008742531916571638,
+      "ci95": [
+        -0.013217183932983585,
+        -0.006688153796080778
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "mixed",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.319189921283953,
+      "sd": 0.038789812916296636,
+      "ci95": [
+        0.3047055670973092,
+        0.3336742754705968
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "mixed",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.30581975693643854,
+      "sd": 0.03991473588938407,
+      "ci95": [
+        0.29091534960826376,
+        0.3207241642646133
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "mixed",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.319189921283953,
+      "sd": 0.038789812916296636,
+      "ci95": [
+        0.3047055670973092,
+        0.3336742754705968
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "mixed",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "mixed",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "mixed",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "mixed",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": -0.319189921283953,
+      "sd": 0.03878981291629664,
+      "ci95": [
+        -0.3336742754705968,
+        -0.3047055670973092
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "mixed",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": -0.31922118631521806,
+      "sd": 0.038844315976294584,
+      "ci95": [
+        -0.3337258922789372,
+        -0.30471648035149895
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "mixed",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": -0.31940637150040324,
+      "sd": 0.03906353120067183,
+      "ci95": [
+        -0.3339929337741756,
+        -0.3048198092266309
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "temperature_40_plus",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.7463243000282996,
+      "sd": 0.047260413333112435,
+      "ci95": [
+        0.7286769716639911,
+        0.7639716283926081
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "temperature_40_plus",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.6989423370148268,
+      "sd": 0.05229390090181682,
+      "ci95": [
+        0.6794154735030684,
+        0.7184692005265851
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "temperature_40_plus",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.7463243000282996,
+      "sd": 0.047260413333112435,
+      "ci95": [
+        0.7286769716639911,
+        0.7639716283926081
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "temperature_40_plus",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "temperature_40_plus",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "temperature_40_plus",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "temperature_40_plus",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": -0.7463243000282994,
+      "sd": 0.04726041333311242,
+      "ci95": [
+        -0.7639716283926079,
+        -0.7286769716639909
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "temperature_40_plus",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": -0.7594672049032493,
+      "sd": 0.042776623416331316,
+      "ci95": [
+        -0.7754402585966976,
+        -0.7434941512098009
+      ]
+    }
+  },
+  {
+    "case": "NOISE_HIGH",
+    "group": "temperature_40_plus",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": -0.7594672049032493,
+      "sd": 0.042776623416331316,
+      "ci95": [
+        -0.7754402585966976,
+        -0.7434941512098009
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "ALL",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.38086423194180286,
+      "sd": 0.030174100584321094,
+      "ci95": [
+        0.3695970376124612,
+        0.3921314262711445
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "ALL",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.23488022657823748,
+      "sd": 0.029658012874130977,
+      "ci95": [
+        0.22380574256698624,
+        0.24595471058948873
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "ALL",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.3809511159188347,
+      "sd": 0.030141168126969,
+      "ci95": [
+        0.3696962187711668,
+        0.39220601306650255
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "ALL",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": -0.013989473132798283,
+      "sd": 0.050927437943931106,
+      "ci95": [
+        -0.033006090990429476,
+        0.005027144724832908
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "ALL",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": -0.18703264781974188,
+      "sd": 0.028379884254080844,
+      "ci95": [
+        -0.19762987076070024,
+        -0.17643542487878353
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "ALL",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": -0.013989473132798283,
+      "sd": 0.050927437943931106,
+      "ci95": [
+        -0.033006090990429476,
+        0.005027144724832908
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "ALL",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": -0.38086423194180286,
+      "sd": 0.03017410058432111,
+      "ci95": [
+        -0.39213142627114456,
+        -0.36959703761246115
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "ALL",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": -0.46670522665244696,
+      "sd": 0.02599793486018354,
+      "ci95": [
+        -0.47641301507227685,
+        -0.45699743823261707
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "ALL",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": -0.4757518430506564,
+      "sd": 0.02457158969711768,
+      "ci95": [
+        -0.4849270254334622,
+        -0.46657666066785053
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "high_temperature",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.7203498316891069,
+      "sd": 0.06401661022019277,
+      "ci95": [
+        0.6964456365784356,
+        0.7442540267997783
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "high_temperature",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.5681867709046677,
+      "sd": 0.04457265159016611,
+      "ci95": [
+        0.5515430692693191,
+        0.5848304725400164
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "high_temperature",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.7208528359140703,
+      "sd": 0.06420382084143385,
+      "ci95": [
+        0.6968787352085614,
+        0.7448269366195793
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "high_temperature",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "high_temperature",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "high_temperature",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "high_temperature",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": -0.7203498316891069,
+      "sd": 0.06401661022019277,
+      "ci95": [
+        -0.7442540267997783,
+        -0.6964456365784356
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "high_temperature",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": -0.8187493706646684,
+      "sd": 0.031577987504075464,
+      "ci95": [
+        -0.8305407849851607,
+        -0.806957956344176
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "high_temperature",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": -0.8187493706646684,
+      "sd": 0.031577987504075464,
+      "ci95": [
+        -0.8305407849851607,
+        -0.806957956344176
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "low_temperature",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.7208202589161876,
+      "sd": 0.05158181083416027,
+      "ci95": [
+        0.7015592942056167,
+        0.7400812236267585
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "low_temperature",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.5674348833052357,
+      "sd": 0.05012573236137857,
+      "ci95": [
+        0.5487176272320029,
+        0.5861521393784686
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "low_temperature",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.7208202589161876,
+      "sd": 0.05158181083416027,
+      "ci95": [
+        0.7015592942056167,
+        0.7400812236267585
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "low_temperature",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "low_temperature",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "low_temperature",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "low_temperature",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": -0.7208202589161876,
+      "sd": 0.05158181083416024,
+      "ci95": [
+        -0.7400812236267585,
+        -0.7015592942056167
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "low_temperature",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": -0.8150333313894669,
+      "sd": 0.03369724911830841,
+      "ci95": [
+        -0.8276160910021098,
+        -0.802450571776824
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "low_temperature",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": -0.8159765706911498,
+      "sd": 0.03316513571021484,
+      "ci95": [
+        -0.8283606358917592,
+        -0.8035925054905404
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "low_spo2",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.6816741779864663,
+      "sd": 0.04757099466492984,
+      "ci95": [
+        0.6639108766468947,
+        0.699437479326038
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "low_spo2",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.5606272936078334,
+      "sd": 0.05231719063263796,
+      "ci95": [
+        0.5410917335676629,
+        0.5801628536480038
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "low_spo2",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.6816741779864663,
+      "sd": 0.04757099466492984,
+      "ci95": [
+        0.6639108766468947,
+        0.699437479326038
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "low_spo2",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "low_spo2",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "low_spo2",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "low_spo2",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": -0.6816741779864663,
+      "sd": 0.04757099466492984,
+      "ci95": [
+        -0.699437479326038,
+        -0.6639108766468947
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "low_spo2",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": -0.8125592305811712,
+      "sd": 0.03842646332755511,
+      "ci95": [
+        -0.8269079078015904,
+        -0.798210553360752
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "low_spo2",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": -0.8154282636300099,
+      "sd": 0.037546054620511936,
+      "ci95": [
+        -0.8294481908363638,
+        -0.8014083364236559
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "low_hr",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": -0.08111787242043682,
+      "sd": 0.04152696600216717,
+      "ci95": [
+        -0.09662429636659102,
+        -0.06561144847428262
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "low_hr",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": -0.30012319338814325,
+      "sd": 0.047986884137179255,
+      "ci95": [
+        -0.31804179040886593,
+        -0.28220459636742057
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "low_hr",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": -0.08111787242043682,
+      "sd": 0.04152696600216717,
+      "ci95": [
+        -0.09662429636659102,
+        -0.06561144847428262
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "low_hr",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "low_hr",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "low_hr",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "low_hr",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.0811178724204368,
+      "sd": 0.041526966002167175,
+      "ci95": [
+        0.0656114484742826,
+        0.096624296366591
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "low_hr",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.016690376460813616,
+      "sd": 0.037872916064437816,
+      "ci95": [
+        0.002548397185428106,
+        0.030832355736199128
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "low_hr",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": -0.031265326261327026,
+      "sd": 0.02953144447558171,
+      "ci95": [
+        -0.04229254885584033,
+        -0.020238103666813723
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "high_hr",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": -0.07468755876086848,
+      "sd": 0.04530410458117968,
+      "ci95": [
+        -0.09160438943181173,
+        -0.057770728089925234
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "high_hr",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": -0.21637162632627785,
+      "sd": 0.0325597253252489,
+      "ci95": [
+        -0.22852962757388393,
+        -0.20421362507867177
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "high_hr",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": -0.07468755876086848,
+      "sd": 0.04530410458117968,
+      "ci95": [
+        -0.09160438943181173,
+        -0.057770728089925234
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "high_hr",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "high_hr",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "high_hr",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "high_hr",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.07468755876086848,
+      "sd": 0.04530410458117967,
+      "ci95": [
+        0.05777072808992524,
+        0.09160438943181172
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "high_hr",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": -0.027897802039678437,
+      "sd": 0.03228900439073374,
+      "ci95": [
+        -0.03995471442898765,
+        -0.01584088965036922
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "high_hr",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": -0.028388853762651777,
+      "sd": 0.032480007209546614,
+      "ci95": [
+        -0.04051708777664381,
+        -0.01626061974865974
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "mixed",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.29519470954875326,
+      "sd": 0.04113300049184357,
+      "ci95": [
+        0.27983539474182495,
+        0.3105540243556816
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "mixed",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.22752726620666944,
+      "sd": 0.03904648888955794,
+      "ci95": [
+        0.21294706763645152,
+        0.24210746477688735
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "mixed",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.29519470954875326,
+      "sd": 0.04113300049184357,
+      "ci95": [
+        0.27983539474182495,
+        0.3105540243556816
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "mixed",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "mixed",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "mixed",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "mixed",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": -0.2951947095487532,
+      "sd": 0.04113300049184357,
+      "ci95": [
+        -0.3105540243556815,
+        -0.2798353947418249
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "mixed",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": -0.2968878136864889,
+      "sd": 0.03969194183436554,
+      "ci95": [
+        -0.3117090283472866,
+        -0.28206659902569126
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "mixed",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": -0.2968878136864889,
+      "sd": 0.03969194183436554,
+      "ci95": [
+        -0.3117090283472866,
+        -0.28206659902569126
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "temperature_40_plus",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.6136669392191224,
+      "sd": 0.06810542430409662,
+      "ci95": [
+        0.5882359558374585,
+        0.6390979226007864
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "temperature_40_plus",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.4892447474140944,
+      "sd": 0.07247195028351008,
+      "ci95": [
+        0.4621832764354038,
+        0.516306218392785
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "temperature_40_plus",
+    "metric": "sensitivity",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.6136669392191224,
+      "sd": 0.06810542430409662,
+      "ci95": [
+        0.5882359558374585,
+        0.6390979226007864
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "temperature_40_plus",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "temperature_40_plus",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "temperature_40_plus",
+    "metric": "false_positive_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "temperature_40_plus",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "THREE",
+    "difference": {
+      "mean": -0.6136669392191224,
+      "sd": 0.0681054243040966,
+      "ci95": [
+        -0.6390979226007864,
+        -0.5882359558374585
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "temperature_40_plus",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "GUARD",
+    "difference": {
+      "mean": -0.6797134013717507,
+      "sd": 0.046068879135874916,
+      "ci95": [
+        -0.6969158035546537,
+        -0.6625109991888478
+      ]
+    }
+  },
+  {
+    "case": "MISSING_HIGH",
+    "group": "temperature_40_plus",
+    "metric": "abnormal_clearance_rate",
+    "reference": "HR",
+    "method": "HYBRID",
+    "difference": {
+      "mean": -0.6797134013717507,
+      "sd": 0.046068879135874916,
+      "ci95": [
+        -0.6969158035546537,
+        -0.6625109991888478
+      ]
+    }
+  }
+]

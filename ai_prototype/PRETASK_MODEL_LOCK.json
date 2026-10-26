@@ -1,0 +1,20 @@
+{
+  "version": "pretask-v1-lock-01",
+  "status": "LOCKED_BEFORE_IMPLEMENTATION",
+  "created_utc": "2026-10-01T05:19:08.182407+00:00",
+  "files": [
+    {
+      "path": "PRETASK_CONDITION_TASK_MODEL_DESIGN.md",
+      "sha256": "9b53a340cd66250b56380624f3391b54ccb93c98550a8338ed16bda50c31a539"
+    },
+    {
+      "path": "PRETASK_MODEL_PROTOCOL.md",
+      "sha256": "380b0c4f43acd596ea4b1db523faf67d1092c7b68e1cab225b6288649c1f9c66"
+    },
+    {
+      "path": "PRETASK_MODEL_PARAMETERS.json",
+      "sha256": "1e8d12ee2dc7f5e9eab00398f8248fe21fae0605b2a975c3bfcfb6c51216ae16"
+    }
+  ],
+  "rule": "Any later change requires a new amendment and lock; result-driven parameter changes are prohibited."
+}

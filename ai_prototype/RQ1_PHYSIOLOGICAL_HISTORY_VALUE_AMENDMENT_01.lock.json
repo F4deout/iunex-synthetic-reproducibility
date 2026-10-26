@@ -1,0 +1,7 @@
+{
+  "amendment": "RQ1_PHYSIOLOGICAL_HISTORY_VALUE_AMENDMENT_01.md",
+  "sha256": "a87cc1e9a8df3f3ecf32174e89cbba738741ebab9f516f1c82b123bc1ba19bb0",
+  "created_at": "2026-10-07",
+  "timing": "before_generator_implementation_and_before_results",
+  "existing_results_modified": false
+}

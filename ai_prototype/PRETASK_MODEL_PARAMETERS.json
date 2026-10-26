@@ -1,0 +1,75 @@
+{
+  "version": "pretask-v1-minimal-parameters-01",
+  "status": "PREREGISTERED_BEFORE_IMPLEMENTATION",
+  "seeds": [110, 220, 330, 440, 550],
+  "subjects": {"total": 120, "train": 72, "validation": 24, "test": 24},
+  "sessions": {"calibration": 100, "evaluation": 30},
+  "history_k": 20,
+  "task_types": ["AEROBIC", "LOADED_MOVEMENT", "BODYWEIGHT_CIRCUIT"],
+  "planned_demand_levels": [0.7, 0.95, 1.2, 1.5],
+  "planned_duration_minutes": [20.0, 40.0, 60.0],
+  "observation_gap_days": {"values": [1, 2, 3, 7], "probabilities": [0.45, 0.30, 0.15, 0.10]},
+  "subject": {
+    "capacity_log_sd": 0.28,
+    "cross_task_capacity_correlation": 0.45,
+    "tolerance_minutes_log_mean": 2.4849066497880004,
+    "tolerance_minutes_log_sd": 0.30,
+    "recovery_hours_log_mean": 3.1780538303479458,
+    "recovery_hours_log_sd": 0.25,
+    "perception_slope_log_sd": 0.22,
+    "reporting_bias_sd_points": 0.45
+  },
+  "capacity_dynamics": {
+    "continuous_log_sd_per_30_days": 0.02,
+    "event_probability_per_30_days": 0.07,
+    "event_log_sd": 0.06
+  },
+  "pretask_state": {
+    "debt_weight": 0.50,
+    "sleep_weight": 0.25,
+    "stress_weight": 0.15,
+    "unobserved_weight": 0.10,
+    "session_unobserved_sd": 0.18
+  },
+  "physiology": {
+    "resting_hr_mean": 64.0,
+    "resting_hr_sd": 7.0,
+    "temperature_mean_c": 36.65,
+    "temperature_between_subject_sd_c": 0.18,
+    "spo2_mean_pct": 97.5,
+    "spo2_between_subject_sd_pct": 0.7,
+    "fatigue_hr_gain_bpm": 15.0,
+    "stress_hr_gain_bpm": 6.0,
+    "measurement_hr_sd_bpm": 3.0,
+    "measurement_temperature_sd_c": 0.12,
+    "measurement_spo2_sd_pct": 0.6,
+    "missing_probability": 0.04,
+    "artifact_probability": 0.06
+  },
+  "task_outcome": {
+    "relative_demand_threshold": 1.0,
+    "fatigue_capacity_penalty": 0.30,
+    "behavioral_stop_log_sd": 0.10,
+    "post_burden_weights": {"relative_demand": 0.30, "duration": 0.20, "pre_fatigue": 0.20, "depletion": 0.20, "unobserved": 0.10},
+    "recovery_delay_base_hours": 4.0,
+    "recovery_delay_burden_gain_hours": 28.0
+  },
+  "reporting": {
+    "session_noise_sd_points": 0.35,
+    "drift_sd_per_30_days": 0.05
+  },
+  "safety_gate_research_only": {
+    "resting_hr_low_bpm": 40.0,
+    "resting_hr_high_bpm": 120.0,
+    "temperature_high_c": 38.0,
+    "spo2_low_pct": 94.0,
+    "provenance": "existing project screening rule; not validated clinical or military deployment threshold"
+  },
+  "provenance": "SIMULATION_ASSUMPTION_UNLESS_EXPLICITLY_DESCRIBED; NO HUMAN PERFORMANCE CLAIM",
+  "freeze_rules": [
+    "no post-result parameter adjustment",
+    "no current-session post-task input",
+    "no latent input",
+    "safety gate separate from learned model"
+  ]
+}

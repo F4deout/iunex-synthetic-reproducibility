@@ -1,0 +1,13 @@
+{
+  "version": "v2-minimal-parameter-lock-1.0",
+  "locked_at_date": "2026-09-21",
+  "result_seen_before_lock": false,
+  "file_sha256": {
+    "SIMULATOR_V2_FINAL_PARAMETERS.json": "2782b6a7d9b8ebf6a6bb01ba67b88c6adf4fb5324898433982205e173138f49a",
+    "SIMULATOR_V2_PROTOCOL_AMENDMENT_20260921_02.md": "d36da53d5c523209996969a9420322966fb0c5a302992fcec0b58a358492d60c",
+    "SIMULATOR_V2_PROTOCOL.md": "ab7ba52d4262dc57bba71b2101014b5a60a6de0ac2bc999c9b5e4deb2fc6793c",
+    "SIMULATOR_V2_PROTOCOL_AMENDMENT_20260921_01.md": "0fb8c38e9fbbc0daec125505628e0eb9828c97115e27fe9142b3e95d32430991"
+  },
+  "calibration_bundle_sha256": "695a708897c966f9a1198f3b53769fc634a6e499e2749fa26a0608d64929b855",
+  "freeze_rule": "No overwrite after v2 results; use a new amendment and config version."
+}

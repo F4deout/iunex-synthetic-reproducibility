@@ -1,0 +1,65 @@
+{
+  "name": "Simulator v2-minimal BASE + Personal History Phase 1 freeze",
+  "date": "2026-09-21",
+  "status": "frozen before ID-test Phase 1 execution",
+  "seeds": [
+    110,
+    220,
+    330,
+    440,
+    550
+  ],
+  "history_lengths": [
+    0,
+    1,
+    3,
+    5,
+    10,
+    20
+  ],
+  "subject_split": [
+    72,
+    24,
+    24
+  ],
+  "evaluation_session_index_min": 20,
+  "evaluation_phase": "post",
+  "target_names": [
+    "fatigue",
+    "burden",
+    "condition"
+  ],
+  "ci_method": "two-sided Student t across five independent seeds, df=4",
+  "ci_t_critical": 2.7764451051977987,
+  "paired_difference": "same seed, same subject/session; abs_error(k=0) minus abs_error(k), then summarize across seeds",
+  "scope_exclusions": [
+    "sensor ablation",
+    "weather ablation",
+    "OOD",
+    "noise/missing",
+    "model comparison"
+  ],
+  "file_sha256": {
+    "SIMULATOR_V2_FINAL_PARAMETERS.json": "2782b6a7d9b8ebf6a6bb01ba67b88c6adf4fb5324898433982205e173138f49a",
+    "SIMULATOR_V2_PROTOCOL_AMENDMENT_20260921_02.md": "d36da53d5c523209996969a9420322966fb0c5a302992fcec0b58a358492d60c",
+    "SIMULATOR_V2_PROTOCOL.md": "ab7ba52d4262dc57bba71b2101014b5a60a6de0ac2bc999c9b5e4deb2fc6793c",
+    "SIMULATOR_V2_PROTOCOL_AMENDMENT_20260921_01.md": "0fb8c38e9fbbc0daec125505628e0eb9828c97115e27fe9142b3e95d32430991",
+    "SIMULATOR_V2_PARAMETERS_AMENDMENT_03.json": "5dbf66aae652a8586a208dc2316a247fb22e17c9d0afe653bb08c2cb9f1a5a0c",
+    "SIMULATOR_V2_PROTOCOL_AMENDMENT_20260921_03.md": "447e84964df91a56b35bd61951d7ed9076394f9a07074694ed93b6863847001f",
+    "SIMULATOR_V2_PROTOCOL_AMENDMENT_20260921_04.md": "d655bc47b4540998af47e4520ff92e8988468988b5a7c91a418145005fe530cc",
+    "SIMULATOR_V2_PARAMETERS_AMENDMENT_04.json": "791f12157dcf787915d65303443635029a00f1b97ab24dafa4944fbf3f0c3d4c",
+    "SIMULATOR_V2_PROTOCOL_AMENDMENT_20260921_05.md": "d4008a58b83245acfb939f5371c8c44160d7c23e6884a1bc201f17b542da78ef",
+    "SIMULATOR_V2_PARAMETERS_AMENDMENT_05.json": "b8afba9551429840d382212fcc04543aac66a6dba8d0e7e2fdde8be6a762f404",
+    "SIMULATOR_V2_PROTOCOL_AMENDMENT_20260921_06.md": "333251d6966384397e6190d70622216b12a07d6cd3e7bbf0272cc14b84b5337c",
+    "SIMULATOR_V2_PARAMETERS_AMENDMENT_06.json": "9d933ce7ef80ec6b4c6f63f244313e41cd228f77b6f84f73e28eea8125523054",
+    "SIMULATOR_V2_PARAMETERS_AMENDMENT_06.manifest.json": "a531f7df4a019b28a9ec2ac061d707684ab3e834be53bfa744e37c7fafe8ddb3",
+    "artifacts/simulator_v2_calibration_v1/calibration.json": "b2e948222484d167c5df42e7ac03df75f150916701568c33578f4ef7f5591d45",
+    "artifacts/simulator_v2_calibration_v1/CALIBRATION.sha256": "bed6fdfb75f10a44963188b37c4c69357163ee9b876edc52913316f6212ee24e",
+    "simulator_v2.py": "b722255ba7585a5fc5737f821223063fc3e9fd5930389611d8d3cc30ea9c49c2",
+    "validate_simulator_v2.py": "95f1e8a2093b81a3f2135fdf4f4e10bb794de4e8fcc3e2a00a494b2f98db7099",
+    "capacity.py": "085b626f21f1aa4c6096d7221cc38f897b0ac350abbd23d312f76255cbf2927c",
+    "run_v2_phase1_history.py": "87546cad49eb71f013d950c15b8df6a6864a7ef13cbc59fa8ad231975047f720",
+    "artifacts/synthetic_v2_dryrun_amendment06/REPORT.md": "51da9d981a5baaefadd511816d24915c09a3cab046b9777cc178c66b54e1c904",
+    "artifacts/synthetic_v2_dryrun_amendment06/validation.json": "c4613c59485af24f759e359d56bcd942aad25b890d06eaab624960216c60d78e"
+  }
+}

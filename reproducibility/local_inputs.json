@@ -1,0 +1,15 @@
+{
+  "files": [
+    {
+      "path": "ai_prototype/artifacts/simulator_v2_calibration_v1/calibration.json",
+      "sha256": "b2e948222484d167c5df42e7ac03df75f150916701568c33578f4ef7f5591d45",
+      "required_for": "original RQ2/daily-state source baselines"
+    },
+    {
+      "path": "ai_prototype/artifacts/simulator_v2_calibration_v1/manifest.json",
+      "sha256": "538bfb8f5651c090cb5b8c27c3c188b4ed6879e55981e1934b651537d791b653",
+      "required_for": "original RQ2/daily-state source baselines"
+    }
+  ],
+  "pmdata_directory": "ai_prototype/data/pmdata"
+}

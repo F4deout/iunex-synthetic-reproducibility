@@ -1,0 +1,185 @@
+{
+  "version": "v2-minimal-parameter-lock-1.0",
+  "date": "2026-09-21",
+  "status": "preimplementation; no v2 outcomes observed",
+  "base_protocol_sha256": "ab7ba52d4262dc57bba71b2101014b5a60a6de0ac2bc999c9b5e4deb2fc6793c",
+  "calibration_bundle_sha256": "695a708897c966f9a1198f3b53769fc634a6e499e2749fa26a0608d64929b855",
+  "calibration_path": "artifacts/simulator_v2_calibration_v1/calibration.json",
+  "interpretation": {
+    "condition": "0-10 synthetic current-state self-report; neither medical readiness nor military duty fitness",
+    "reported_intensity": "absent from observed features and from current empirical calibration; PMData RPE is target/calibration only",
+    "observed_activity": "duration in minutes plus recorded categorical activity labels; no RPE-derived intensity or session load",
+    "relative_dose": "duration_minutes / 60 / capacity_i times exp(activity_error) times task_demand; capacity_i and task_demand are latent; activity labels are observed but have no fixed intensity multiplier",
+    "calibration_status": "P01/P08/P09 and all PMData/SoccerMon observations are empirical calibration references, not estimates of the military population",
+    "sensitivity": "BASE plus LOW and HIGH for every critical family; one family at a time; no post-result selection",
+    "distribution_conversion": "Manufacturer accuracy bounds, FDA Arms and cross-sectional physiological SD are not Gaussian simulator measurement SD; A10-A12 are independent simulation assumptions",
+    "parameterization": "All coefficients below multiply dimensionless bounded latent units. LOW/BASE/HIGH are stress scenarios, not confidence bounds or physiological estimates."
+  },
+  "empirical_P01_P10": {
+    "sampling": "Use frozen calibration.json empirical support and protocol extraction rules without refitting or editing; subject-level bootstrap P01; P02 pooled residual; P03-P06 and P10 empirical; P07-P09 sanity checks only.",
+    "P01": "14 subject medians, empirical reference only",
+    "P08": "51 valid average-HR minus previous-day resting-HR values from 64 matched running sessions, not station post-HR",
+    "P09": "13 dated 5-km profiles, running-only capacity dispersion reference; nonrunning capacity dispersion is A02 assumption"
+  },
+  "source_constraints": {
+    "P11": {
+      "status": "partly source constrained; simulator site choice assumed",
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6456186/",
+      "published": "Healthy-adult tympanic mean 36.64 C and pooled SD 0.44 C; oral mean 36.57 C and SD 0.42 C; site and age matter.",
+      "simulator_choice": "Tympanic-equivalent resting temperature proxy, center 36.64 C; this does not imply a tympanic sensor is selected or core-temperature measurement. Subject SD and within-person variation remain P11 assumptions."
+    },
+    "P12": {
+      "status": "partly source constrained; population transfer assumed",
+      "source": "https://pubmed.ncbi.nlm.nih.gov/22441344/",
+      "published": "Healthy young volunteers near sea level (43 m): pulse-oximetry mean 98.53%, cross-sectional SD 0.52%; at 725 m: 98.11%, SD 0.8%.",
+      "simulator_choice": "Near-sea-level healthy-adult reference center 98.53%; altitude and real military population distribution not inferred. Subject SD and within-person variation remain P12 assumptions."
+    },
+    "P13": {
+      "status": "no selected complete device; measurement SD assumed",
+      "source": "https://www.analog.com/en/products/max30102.html",
+      "published": "MAX30102 component specifications do not establish integrated station pulse-rate error distribution.",
+      "simulator_choice": "A10 assumed HR error SD; no claim of MAX30102 accuracy."
+    },
+    "P14": {
+      "status": "conditional part-number accuracy bound only; measurement SD assumed",
+      "source": "https://www.melexis.com/-/media/files/documents/datasheets/mlx90614-datasheet-melexis.pdf",
+      "published": "Medical accuracy of MLX90614Dxx variants is about +/-0.2 C at object temperature 36-38 C under specified ambient/object conditions; not generic MLX90614 or finished forehead-body estimate.",
+      "simulator_choice": "A11 assumed temperature error SD, independently of manufacturer maximum-error bound."
+    },
+    "P15": {
+      "status": "full-system validation bound only; measurement SD assumed",
+      "source": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/pulse-oximeters-premarket-notification-submissions-510ks-guidance-industry-and-food-drug",
+      "published": "FDA 2013 guidance typical Arms at 70-100%: <=3.0 percentage points for transmittance clip/wrap, <=3.5 for reflectance and ear clip; application site and sensor geometry matter.",
+      "simulator_choice": "A12 assumed SpO2 error SD; Arms is sqrt(mean squared error), not SD, and cannot be substituted as SD or claimed for an unvalidated module."
+    },
+    "D01": {
+      "status": "source-guided exclusion of inapplicable heat-index/WBGT claim; numerical proxy assumed",
+      "sources": ["https://www.weather.gov/tbw/heatindex", "https://www.cdc.gov/niosh/docs/2016-106/pdfs/2016-106.pdf"],
+      "published": "NWS Rothfusz heat index is generally applied after an initial estimate around 80 F; WBGT outdoors also requires natural wet-bulb and globe temperature. P10 observed air temperatures are 0.704-22.846 C.",
+      "simulator_choice": "Station weather proxy z=(T_C-12.369)/5.871; humidity and wind remain observed model features but do not causally enter local heat in v2-minimal. This is an assumption, not WBGT, heat index or physiological heat exposure."
+    },
+    "D09": {
+      "status": "protocol-dependent literature sanity check; coefficient assumed",
+      "source": "https://pubmed.ncbi.nlm.nih.gov/25114730/",
+      "published": "Trained cyclists' one-minute drop after maximal test was 22+/-8 or 25+/-12 bpm; different exercise protocol and timepoint.",
+      "simulator_choice": "D09 mapping remains assumption; no conversion of P08 session average HR to immediate post-HR."
+    },
+    "D10": {
+      "status": "site/protocol-specific mapping unavailable; assumed",
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3418963/",
+      "published": "Oral versus core temperature diverges during activity and hyperthermia; temperature channel must not be interpreted as core heat-strain diagnosis.",
+      "simulator_choice": "D10 tympanic-equivalent proxy gain assumed, with no exertional heat-stroke inference."
+    },
+    "D11": {
+      "status": "altitude/activity protocol-specific mapping unavailable; assumed",
+      "source": "https://pubmed.ncbi.nlm.nih.gov/22441344/",
+      "published": "Six-minute walk mean SpO2 decline near sea level 0.38+/-0.65 percentage points, at 725 m 0.37+/-1.12; cannot determine arbitrary task/latent-unit mapping.",
+      "simulator_choice": "D11 gain assumed and sensitivity tested."
+    },
+    "D12": {
+      "status": "separate process and device error requires repeated reference observations; assumed",
+      "simulator_choice": "D12 physiological process-error scale assumed; distinct from A10-A12 sensor measurement error."
+    }
+  },
+  "fixed_generation_choices": {
+    "P11_center_c": 36.64,
+    "P12_center_percent": 98.53,
+    "D01_weather_reference_mean_c": 12.369,
+    "D01_weather_reference_sd_c": 5.871,
+    "D01_weather_proxy": "(T_C - reference_mean_c) / reference_sd_c; local_heat = D01_weather_proxy_multiplier * environment_sensitivity * proxy + local_exposure_error",
+    "D07_bounded_latent_transform": "clip(raw_latent, -D07_latent_clip_abs, D07_latent_clip_abs), before physical mapping; no full-dataset normalization",
+    "D13_target_transform": "clip_0_10(intercept + gain * signed_dimensionless_construct + subject_reporting_bias + label_noise); fatigue and burden higher=worse, condition higher=better; weights remain protocol section 6.5",
+    "D14_clip_rule": "clip to [0,10] once after reporting bias/noise; record pre-clip lower/upper rates; if predeclared tolerance exceeded, flag but never redraw or tune",
+    "D16_innovation_process": "AR(1) in session index with coefficient phi and stationary marginal SD from A09; innovation_t = phi*innovation_previous + sqrt(1-phi^2)*epsilon, epsilon SD=A09",
+    "target_generation": "Observed sensor values and past/current RPE labels never enter target equations; RPE serves only P06 empirical calibration and eventual evaluation target",
+    "device_claim": "No physical station model, sensor part number, clinical error or military population distribution inferred",
+    "session_design": "60 activity sessions per subject sampled from P03/P04/P05; each yields one pre-activity observation and one post-activity observation in the same subject/session split. Fatigue and condition labels at both observations; exercise burden label only post-activity. The first 20 sessions provide past sensor/context history and are never target-evaluation sessions.",
+    "measurement_timing": "Post-activity physiology is at nominal cessation; no delay inferred from PMData. It is a synthetic sampling convention, not a station measurement claim.",
+    "subject_distributions": "P01 subject median empirical bootstrap; resting HR residual P02 empirical; temperature baseline Normal(P11_center,P11_subject_sd), bounded [35,38] C; SpO2 baseline Normal(P12_center,P12_subject_sd), bounded [95,100] percent; capacity median 1 lognormal log-SD A02; response/recovery/environment positive multipliers median 1 lognormal with A01/A04/A08 log-SD; recovery tau median A03 days times recovery multiplier.",
+    "unobserved_distributions": "Activity error multiplicative max(0.1,1+Normal(0,A05)); task-demand multiplier lognormal median 1 and log-SD A06; local-exposure residual Normal(0,A07); acute cardiovascular, thermal and oxygen unobserved residuals independent Normal(0,A09/2); unobserved wellness follows D16 with marginal SD A09. Latent per-subject and per-session draws are independent unless explicitly linked by D16/recovery debt.",
+    "recovery_and_acute_states": "Recovery debt = D07_clip(exp(-gap_days/tau_i)*previous_debt + D02*relative_dose + D03*max(0,local_heat) + wellness_innovation); cardiovascular strain = D07_clip(response_i*relative_dose + D04*debt + acute_cv_error); thermal strain = D07_clip(response_i*local_heat + D05*relative_dose + acute_thermal_error); oxygenation strain = D07_clip(D06*relative_dose + acute_oxygen_error). Pre-activity values exclude the current activity dose; post values include it.",
+    "physiology_and_sensor_distributions": "True pre-HR=P01 baseline+P02 residual+D08*pre-debt+Normal(0,D12_pre_hr_process_sd); true post-HR=true pre-HR+D09*post cardiovascular strain+Normal(0,D12_post_hr_process_sd); true temperature=P11 baseline+D10*thermal strain+P11 within-person Normal residual+Normal(0,D12_temp_process_sd); true SpO2=P12 baseline-D11*oxygenation strain+P12 within-person Normal residual+Normal(0,D12_spo2_process_sd). Each sensor has a subject-specific Normal(0,A22*ordinary measurement SD) fixed bias plus independent Normal(0,A10/A11/A12) ordinary noise, and artifact Normal(0,A15*ordinary SD) with probability A14; ordinary missing A13, with artifact-missing dependence otherwise disabled. Physical values are clamped to HR [30,230], temperature [34,41] C, SpO2 [70,100] percent and clamp counts are reported; these bounds are simulator assumptions, not normal ranges or safety criteria.",
+    "quality_distribution": "Binary diagnostic of the artifact event flipped independently with probability A16; if missing, quality absent. This is a deliberately simplified simulated SQI, not a device algorithm or measured sensitivity/specificity.",
+    "target_constructs": "Fatigue shared=A19*(0.70*debt+0.30*CV); unshared=(1-A19)*wellness. Burden shared=A20*(0.50*relative_dose+0.30*CV+0.20*pre-debt); unshared=(1-A20)*log(task_demand)/max(A06,0.01). Condition shared=-A21*(0.40*debt+0.20*CV+0.25*thermal+0.15*oxygen); unshared=(1-A21)*wellness. Apply D13 target-specific intercept and common gain to sum of shared+unshared constructs, then subject reporting bias Normal(0,A17) and independent label noise Normal(0,A18). Model never observes these latent terms."
+  },
+  "sensitivity_parameters": {
+    "P11_subject_sd_c": {"low": 0.10, "base": 0.20, "high": 0.30, "unit": "C", "critical": true},
+    "P11_within_person_sd_c": {"low": 0.05, "base": 0.15, "high": 0.30, "unit": "C", "critical": true},
+    "P12_subject_sd_pp": {"low": 0.20, "base": 0.50, "high": 0.80, "unit": "percentage points", "critical": true},
+    "P12_within_person_sd_pp": {"low": 0.10, "base": 0.30, "high": 0.60, "unit": "percentage points", "critical": true},
+    "P13_hr_measurement_sd_bpm": {"alias": "A10"},
+    "P14_temp_measurement_sd_c": {"alias": "A11"},
+    "P15_spo2_measurement_sd_pp": {"alias": "A12"},
+    "P16_artifact_probability": {"alias": "A14"},
+    "P16_artifact_scale": {"alias": "A15"},
+    "P17_sqi_misclassification": {"alias": "A16"},
+    "D01_weather_proxy_multiplier": {"low": 0.50, "base": 1.00, "high": 1.50, "unit": "multiplier", "critical": true},
+    "D02_activity_to_debt": {"low": 0.10, "base": 0.25, "high": 0.50, "unit": "latent units per relative dose", "critical": true},
+    "D03_local_heat_to_debt": {"low": 0.05, "base": 0.20, "high": 0.40, "unit": "latent units per positive local heat", "critical": true},
+    "D04_debt_to_cv": {"low": 0.10, "base": 0.25, "high": 0.50, "unit": "CV latent units per debt unit", "critical": true},
+    "D05_activity_to_thermal": {"low": 0.05, "base": 0.20, "high": 0.40, "unit": "thermal latent units per relative dose", "critical": true},
+    "D06_activity_to_oxygen": {"low": 0.00, "base": 0.10, "high": 0.25, "unit": "oxygenation latent units per relative dose", "critical": true},
+    "D07_latent_clip_abs": {"low": 2.0, "base": 3.0, "high": 4.0, "unit": "dimensionless latent units", "critical": true},
+    "D08_debt_to_pre_hr_bpm": {"low": 1.0, "base": 3.0, "high": 6.0, "unit": "bpm per debt unit", "critical": true},
+    "D09_cv_to_post_hr_bpm": {"low": 30.0, "base": 60.0, "high": 90.0, "unit": "bpm per CV unit", "critical": true},
+    "D10_thermal_to_temp_c": {"low": 0.15, "base": 0.35, "high": 0.60, "unit": "C per thermal unit", "critical": true},
+    "D11_oxygen_to_spo2_pp": {"low": 0.20, "base": 0.70, "high": 1.50, "unit": "percentage points per oxygenation unit", "critical": true},
+    "D12_pre_hr_process_sd_bpm": {"low": 0.5, "base": 1.0, "high": 2.0, "unit": "bpm", "critical": true},
+    "D12_post_hr_process_sd_bpm": {"low": 1.0, "base": 2.0, "high": 4.0, "unit": "bpm", "critical": true},
+    "D12_temp_process_sd_c": {"low": 0.03, "base": 0.08, "high": 0.15, "unit": "C", "critical": true},
+    "D12_spo2_process_sd_pp": {"low": 0.10, "base": 0.25, "high": 0.50, "unit": "percentage points", "critical": true},
+    "D13_fatigue_intercept": {"low": 4.0, "base": 5.0, "high": 6.0, "unit": "0-10 score units", "critical": true},
+    "D13_burden_intercept": {"low": 4.7, "base": 5.7, "high": 6.7, "unit": "0-10 score units; BASE near P06 mean only", "critical": true},
+    "D13_condition_intercept": {"low": 4.0, "base": 5.0, "high": 6.0, "unit": "0-10 score units", "critical": true},
+    "D13_score_gain": {"low": 1.0, "base": 1.8, "high": 2.6, "unit": "score units per signed construct unit", "critical": true},
+    "D14_max_flagged_preclip_rate": {"low": 0.02, "base": 0.10, "high": 0.25, "unit": "fraction; QC flag only, never generation acceptance criterion", "critical": true},
+    "D15_burnin_sessions": {"low": 20, "base": 60, "high": 120, "unit": "sessions omitted from scoring", "critical": true},
+    "D15_initial_debt_sd": {"low": 0.0, "base": 0.3, "high": 0.6, "unit": "latent units; centered 0", "critical": true},
+    "D16_innovation_ar1_phi": {"low": 0.0, "base": 0.2, "high": 0.5, "unit": "lag-1 session correlation", "critical": true},
+    "A01_response_heterogeneity_log_sd": {"low": 0.10, "base": 0.25, "high": 0.40, "critical": true},
+    "A02_capacity_log_sd": {"low": 0.10, "base": 0.20, "high": 0.35, "critical": true},
+    "A03_recovery_tau_days": {"low": 0.5, "base": 1.5, "high": 3.0, "critical": true},
+    "A04_recovery_log_sd": {"low": 0.10, "base": 0.25, "high": 0.40, "critical": true},
+    "A05_activity_error_sd": {"low": 0.05, "base": 0.15, "high": 0.30, "critical": true},
+    "A06_task_log_sd": {"low": 0.05, "base": 0.20, "high": 0.35, "critical": true},
+    "A07_local_exposure_sd": {"low": 0.20, "base": 0.50, "high": 1.00, "critical": true},
+    "A08_environment_sensitivity_log_sd": {"low": 0.10, "base": 0.25, "high": 0.40, "critical": true},
+    "A09_wellness_innovation_sd": {"low": 0.25, "base": 0.50, "high": 0.90, "critical": true},
+    "A10_hr_measurement_sd_bpm": {"low": 1.0, "base": 3.0, "high": 6.0, "critical": true},
+    "A11_temp_measurement_sd_c": {"low": 0.05, "base": 0.15, "high": 0.30, "critical": true},
+    "A12_spo2_measurement_sd_pp": {"low": 0.5, "base": 1.0, "high": 2.0, "critical": true},
+    "A13_missing_probability": {"low": 0.01, "base": 0.05, "high": 0.20, "critical": false},
+    "A14_artifact_probability": {"low": 0.03, "base": 0.10, "high": 0.25, "critical": true},
+    "A15_artifact_error_multiplier": {"low": 3.0, "base": 6.0, "high": 10.0, "critical": true},
+    "A16_sqi_misclassification_probability": {"low": 0.30, "base": 0.15, "high": 0.05, "critical": true, "note": "LOW=low SQI reliability; HIGH=high SQI reliability"},
+    "A17_reporting_bias_sd": {"low": 0.20, "base": 0.50, "high": 1.00, "critical": true},
+    "A18_label_noise_sd": {"low": 0.30, "base": 0.70, "high": 1.20, "critical": true},
+    "A19_fatigue_shared_weight": {"low": 0.40, "base": 0.60, "high": 0.75, "critical": true},
+    "A20_burden_shared_weight": {"low": 0.55, "base": 0.70, "high": 0.85, "critical": true},
+    "A21_condition_shared_weight": {"low": 0.35, "base": 0.55, "high": 0.70, "critical": true},
+    "A22_sensor_bias_sd_multiplier": {"low": 0.5, "base": 1.0, "high": 2.0, "critical": false}
+  },
+  "sensitivity_families": {
+    "P11_P12_baselines": ["P11_subject_sd_c", "P11_within_person_sd_c", "P12_subject_sd_pp", "P12_within_person_sd_pp"],
+    "heterogeneity": ["A01_response_heterogeneity_log_sd", "A02_capacity_log_sd", "A04_recovery_log_sd"],
+    "recovery": ["A03_recovery_tau_days", "A09_wellness_innovation_sd", "D02_activity_to_debt", "D04_debt_to_cv", "D08_debt_to_pre_hr_bpm", "D16_innovation_ar1_phi"],
+    "activity_unobserved": ["A05_activity_error_sd", "A06_task_log_sd"],
+    "environment": ["A07_local_exposure_sd", "A08_environment_sensitivity_log_sd", "D01_weather_proxy_multiplier", "D03_local_heat_to_debt"],
+    "physiology_mapping": ["D05_activity_to_thermal", "D06_activity_to_oxygen", "D09_cv_to_post_hr_bpm", "D10_thermal_to_temp_c", "D11_oxygen_to_spo2_pp"],
+    "measurement": ["A10_hr_measurement_sd_bpm", "A11_temp_measurement_sd_c", "A12_spo2_measurement_sd_pp", "A13_missing_probability", "A14_artifact_probability", "A15_artifact_error_multiplier", "A16_sqi_misclassification_probability", "A22_sensor_bias_sd_multiplier", "D12_pre_hr_process_sd_bpm", "D12_post_hr_process_sd_bpm", "D12_temp_process_sd_c", "D12_spo2_process_sd_pp"],
+    "label": ["A17_reporting_bias_sd", "A18_label_noise_sd", "D13_fatigue_intercept", "D13_burden_intercept", "D13_condition_intercept", "D13_score_gain", "D14_max_flagged_preclip_rate"],
+    "construct_observability": ["A19_fatigue_shared_weight", "A20_burden_shared_weight", "A21_condition_shared_weight"],
+    "latent_support_and_initialization": ["D07_latent_clip_abs", "D15_burnin_sessions", "D15_initial_debt_sd"]
+  },
+  "unknowns": {
+    "required_for_synthetic_implementation": [],
+    "real_world_device_or_population": [
+      "chosen HR/temperature/SpO2 complete-device models and measurement sites",
+      "military population baselines and individual variability",
+      "sensor error distribution, artifacts and SQI on the assembled station",
+      "local heat exposure under uniform/PPE/radiation",
+      "actual immediate pre/post measurement timing and physiology response",
+      "prospective planned intensity and real-world 0-10 condition/fatigue labels"
+    ]
+  }
+}

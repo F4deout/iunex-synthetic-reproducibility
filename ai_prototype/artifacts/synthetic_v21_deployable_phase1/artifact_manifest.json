@@ -1,0 +1,11 @@
+{
+  "file_sha256": {
+    "freeze_used.json": "bc3ae16b959df84c476a13957b54e0de2a261067f6e208a6da910fa1d1fe457e",
+    "parameter_seed_metrics.json": "b48f0ddaa3771c8398dbdebb76a34674cb1fe0733036d783b28e94fdb83b2be5",
+    "raw_predictions.csv": "61942f25747c718ac69c26bd6ff208aead87c1a7a599356e45f3ca62a4596b8b",
+    "seed_metrics.json": "167d1398630d6a1c457a7350f950d07bf7915f416f2055ccd53170a7e820a97d",
+    "split_manifest.json": "f229daee2aaab87cac929fff907fb43e869649936b1601b0f3a6d6db83d24001",
+    "summary.json": "02798a13bbf6c6fe8d7c8158a6c3e72ea58abb3555db2883e03bdd4762615101"
+  },
+  "runner_sha256": "0a2cc7ef8ac4be7e10d35af7adf54ec476f815e21cdb54696023e2b2578e071f"
+}

@@ -1,0 +1,64 @@
+{
+  "version": "pretask-final-research-freeze-01",
+  "status": "FROZEN_BEFORE_API_INTEGRATION",
+  "created_utc": "2026-10-01T05:59:23.357818+00:00",
+  "files": [
+    {
+      "path": "PRETASK_MODEL_PROTOCOL.md",
+      "sha256": "380b0c4f43acd596ea4b1db523faf67d1092c7b68e1cab225b6288649c1f9c66"
+    },
+    {
+      "path": "PRETASK_MODEL_PARAMETERS.json",
+      "sha256": "1e8d12ee2dc7f5e9eab00398f8248fe21fae0605b2a975c3bfcfb6c51216ae16"
+    },
+    {
+      "path": "PRETASK_MODEL_LOCK.json",
+      "sha256": "fcfb2c58ba0d04022181ae30b1d930f04f3a6e24396648b5d75971664331db29"
+    },
+    {
+      "path": "simulator_pretask_model.py",
+      "sha256": "54c371c70d8a26e7c4fb6a1ebba0dc88ef3364674983f08d9b633e7bc9537d4a"
+    },
+    {
+      "path": "run_pretask_model.py",
+      "sha256": "84f99b570771a452b0ab3d69a744ab1a82cb04162e72d08da0b8d2afeb974eeb"
+    },
+    {
+      "path": "validate_pretask_model.py",
+      "sha256": "aabd6abbcd1082bbd7c8139d02ccb203415afb9e513553ca706feb70505b9290"
+    },
+    {
+      "path": "PRETASK_INFERENCE_MATURITY_PROTOCOL.md",
+      "sha256": "a1a65fd2718abcb4d6bbc396e30e72f521f0c61b5b1594baf0e2bc0fa2ae10ba"
+    },
+    {
+      "path": "PRETASK_COLD_START_STRESS_PROTOCOL.md",
+      "sha256": "44fa77213ce11c04205edbf3c1c00e300d106bd82c2613401a7fe083fa5c807c"
+    },
+    {
+      "path": "artifacts/pretask_model_phase1/results.json",
+      "sha256": "171862e7b213ae9a4c6e351263fe28e16cff4fdc52f50b0e3f90c6e69cb84dff"
+    },
+    {
+      "path": "artifacts/pretask_model_phase1/validation_report.json",
+      "sha256": "b88906936720478397e702cf8b90d820d169d6da3826ba970d72ce148d567b49"
+    },
+    {
+      "path": "artifacts/pretask_model_information_audit/results.json",
+      "sha256": "9ea6fe3588ac6622d672113607d89716d5614d026599d28a7bb708eb514a3830"
+    },
+    {
+      "path": "artifacts/pretask_inference_maturity/results.json",
+      "sha256": "ac281028fc11c0537076368975b82efde385a2947544bffd9edf6e5641a6b21f"
+    },
+    {
+      "path": "artifacts/pretask_cold_start_stress/results.json",
+      "sha256": "bb15de30a6b9cdef2eca991d9078dc5c09c935528febbfa3d3c40070eae40044"
+    },
+    {
+      "path": "artifacts/pretask_model_phase1/research_model_bundle_seed110.json",
+      "sha256": "8167cee184ffac36cab7b5cf10eb6f0af44cd548f6996e77f977fba620b6b6db"
+    }
+  ],
+  "scope": "Synthetic research model and results; API/UI code is outside this freeze."
+}

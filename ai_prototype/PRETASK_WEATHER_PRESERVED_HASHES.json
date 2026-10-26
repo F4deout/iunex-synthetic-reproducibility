@@ -1,0 +1,8 @@
+{
+  "simulator_pretask_model.py": "54c371c70d8a26e7c4fb6a1ebba0dc88ef3364674983f08d9b633e7bc9537d4a",
+  "pretask_inference.py": "b5b195d4881442827d16c45299f08738a904e9544d1d3bfecae92203491b65cb",
+  "PRETASK_MODEL_PARAMETERS.json": "1e8d12ee2dc7f5e9eab00398f8248fe21fae0605b2a975c3bfcfb6c51216ae16",
+  "PRETASK_MODEL_LOCK.json": "fcfb2c58ba0d04022181ae30b1d930f04f3a6e24396648b5d75971664331db29",
+  "artifacts/pretask_model_phase1/research_model_bundle_seed110.json": "8167cee184ffac36cab7b5cf10eb6f0af44cd548f6996e77f977fba620b6b6db",
+  "artifacts/thermal_state_v1/models.json": "04fef27be623698736dc5bfd58ac3b07c2975eb0865b86f529a7594201fa023f"
+}

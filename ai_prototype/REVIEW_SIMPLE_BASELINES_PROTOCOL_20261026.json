@@ -1,0 +1,49 @@
+{
+  "version": "review-simple-baselines-20261026-01",
+  "status": "LOCK_BEFORE_NEW_BASELINE_RESULTS",
+  "purpose": "Post-review comparison; original paper results already known. Not an independent confirmatory dataset.",
+  "main": {
+    "population": 480,
+    "seeds": [110,220,330,440,550,660,770,880,990,1100,1210,1320,1430,1540,1650,1760,1870,1980,2090,2200,2310,2420,2530,2640,2750,2860,2970,3080,3190,3300],
+    "generation": "Four unchanged 120-subject blocks; block_seed=seed+1000003*block. Assert hashes against scale_stability_20261006, same ID-test samples and truths.",
+    "history_k": 20,
+    "comparators": ["saved_k0", "saved_k20"]
+  },
+  "followup": {
+    "population": 120,
+    "seeds": [110,220,330,440,550],
+    "datasets": ["NATURALISTIC","CONTROLLED_CHANGE"],
+    "history_k": 20,
+    "comparators": ["C1","C5","C6","C7"],
+    "generation": "Unchanged simulator_rq1_physiological_history_value BASE. Assert full subject splits, same saved test sessions and target truths. Exclude latent targets from observable-history baselines."
+  },
+  "methods": {
+    "global_mean": "Mean of train+validation outcomes; no subject history. Binary: empirical completion probability.",
+    "global_median": "Median of train+validation continuous outcomes, appropriate constant for MAE. Binary duplicates global_mean and is omitted.",
+    "personal_mean": "Mean of valid observed outcomes in the strictly previous 20 sessions of the same subject.",
+    "personal_last": "Most recent valid observed outcome in that window.",
+    "task_mean": "Mean within same task/workload (E4 u_anchor), using only the same previous window.",
+    "task_last": "Most recent outcome within that task/workload subset.",
+    "exact_context_mean": "Same task, planned demand, planned duration and gap_days for PRETASK/followup; same u_anchor, planned_minutes and gap_h for E4. Float comparison rtol=0 atol=1e-9. Mean of valid outcomes.",
+    "exact_context_last": "Most recent valid observed outcome in the same exact-context subset.",
+    "anchor_context": "No history or sensors: observed prior anchor, prescribed demand, prescribed duration, gap and task one-hot. Ridge for continuous outcomes, L2 logistic for completion. E4 log-Ridge uses prior 5km speed and evaluation_order only, equivalent input boundary to saved k0."
+  },
+  "fallback": "For all personal rules, no eligible past outcome => global_mean (all train+validation for continuous/completion, stopped-only for stopping-time target). Record fallback count. No test-based fallback selection; do not silently back off to a richer history method.",
+  "information_fairness": "Past self-report mean/last is compared primarily with saved full-history k20 and C6/C7. C5 excludes self-report; self-report baselines are not same-information comparators for its score predictions. Objective recovery/completion/stop baselines are valid C5 comparators. All histories are previous observed records only; no latent values.",
+  "time_endpoint": "Stopping-time MAE/RMSE/R2 on the same observed stopping cases as the stored model; completed cases have no observed stopping target. Do not substitute planned duration for event time. This comparison does not evaluate AFT censored-time C-index or establish survival-model superiority.",
+  "fitting": {
+    "ridge_alphas": [1.0,10.0,100.0],
+    "logistic_alphas": [0.1,1.0,10.0],
+    "selection": "Train-only preprocessing, validation MAE or Brier for selection; same original train+validation preprocessing/refit for final test predictions. No hyperparameter tuning outside grid.",
+    "constant": "Final constants from train+validation only, consistent with original final-refit boundary."
+  },
+  "statistics": {
+    "unit": "seed, never individual sessions as independent replicates",
+    "metrics": "Continuous MAE/RMSE/R2; completion Brier, event rate, ROC-AUC with tied ranks and ECE10 as descriptive secondary metrics.",
+    "paired_difference": "baseline error minus saved model error; positive means saved model improves upon baseline. Mean, sample SD and 95% Student-t CI across paired seeds. Relative difference uses seed-wise (baseline-model)/baseline.",
+    "multiplicity": "For each dataset arm, Bonferroni simultaneous intervals across all valid baseline x target x saved-comparator primary comparisons. Also report unadjusted 95% CI; do not select a best baseline on the test set and call it prospectively selected.",
+    "decision": "All planned baseline results reported, including failures and model losses. No required superiority margin; classify CI positive/negative/overlap zero descriptively, not clinical significance. Five-seed followup is exploratory."
+  },
+  "preservation": "New artifact directory only. Preserve and hash existing source/config/protocol/results. Abort on generator/data/truth mismatch; no simulator fixes or parameter changes. Save predictions, selected alphas, splits, history-source manifests, fallback counts, validation and code/protocol hashes.",
+  "excluded": ["sensor ablation","weather/OOD experiments","simulator tuning","mixed-effects models","manuscript edits","deployment"]
+}
