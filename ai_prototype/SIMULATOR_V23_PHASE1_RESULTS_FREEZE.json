@@ -1,0 +1,15 @@
+{
+  "status": "PHASE1_COMPLETE",
+  "created": "2026-09-28",
+  "protocol_freeze_sha256": "ae67f9d04da47ad74102120f7fe24e1b71aa10e8be5a1eddf188e87df5e26e95",
+  "analysis_sha256": "501382007c15d95f5382aa533128728078d2d6983861f741803e45bf4e783383",
+  "summary_code_sha256": "d88492eea21cf6eb84d2a031f88449a2f1495e42f38e8bf8397187fc7242d7f4",
+  "artifacts": {
+    "results.json": "b26e1a2acc06c37797ceeb8ee4aec42b8419951fe7f580a1a1790e9c70ccbf9e",
+    "state_predictions.csv": "8f1e7fde1513373f4645da4efddf70d6ce281bfdd9ac44daf4f9cf965534be70",
+    "performance_predictions.csv": "434b656f0f60a628fb5782d7913033c26b04d2a1f6f37432e19106d3cb6fc8bd",
+    "REPORT.md": "a5cb8d9ce7ad073be3285fee756cebb67788e35d66597dc1d3f1c0ce9167e0f1",
+    "manifest.json": "b284aadbf74165883a10045fc8d7f2c57368b6b05410c54e70935fee4c10df4d"
+  },
+  "v22_phase1_sha256": "2111a1027052620122d17d4138a6e32d94acfb29d15c4349a2a797d94463f085"
+}

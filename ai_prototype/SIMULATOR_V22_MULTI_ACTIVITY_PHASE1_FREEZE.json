@@ -1,0 +1,23 @@
+{
+  "status": "PHASE_1_COMPLETE",
+  "created": "2026-09-28",
+  "sources": {
+    "SIMULATOR_V22_MULTI_ACTIVITY_AMENDMENT_05.md": "8134a3094be0bc67bda06ca5aa0f6412f362444e32c58a655f51bf6251d2a881",
+    "SIMULATOR_V22_MULTI_ACTIVITY_PARAMETERS.json": "3c5ca26d0787d744155e3ff3507325437da2140f819e41faa1f2575628ecce42",
+    "simulator_v22_multi_activity.py": "0c01193fe46db5b499a19b07741ff5a952a7794a90a9ece56b75088e68b7e178",
+    "run_v22_multi_activity_phase1.py": "cf72bbba83cece053c91cfe0963798f05c2daafe1da39192830c4ea960f92c5e",
+    "summarize_v22_multi_activity_phase1.py": "cd429d55e2a093292ddf99a82a52c24279d2031b924ca12668c10332b3720835"
+  },
+  "artifacts": {
+    "results.json": "2111a1027052620122d17d4138a6e32d94acfb29d15c4349a2a797d94463f085",
+    "raw_predictions.csv": "8d31d5408974278cbfe5af1078e8f69e5ed20b9602a9931817f84fe4f1fced6c",
+    "summary.csv": "e054216f294e783ba1f370e72db77f519981480a8a6d54c86c3608852d613e46",
+    "REPORT.md": "58695777ff090f6149946503d943a3e48654adc698c17788e8a2f810255f10ee",
+    "history_mae_pooled.svg": "afa68f4e2a26032348523ab749f0cc495d5a196b4ba33c1c633d1dc5fbfd0bab",
+    "history_mae_loaded_march.svg": "00d3e0e6160dc63771b5a393823251b3db6c074191fd491e31f13146058c0d52",
+    "history_mae_bodyweight_circuit.svg": "a59c89ade8231a54d093bc80e8781fa0a34c1b36190ed724d074e6b613240f10",
+    "artifact_manifest.json": "e2e50685139f00f1acba66543e812a71e324c629cb2ea1b657625ec6893861b7"
+  },
+  "v22_generator_freeze_sha256": "f2f3b1a8b964b583e3b59979254ce8e63c53cb851104719948437c5585eae797",
+  "v21_running_generator_sha256": "d03b854edb53fa95955d440c58c71bf3e7a158c3104753841f073a20046cf586"
+}

@@ -18,3 +18,10 @@ validation_outputs/
 *.wav
 *.pem
 *.key
+ai_prototype/artifacts/v23_survival_time_correction_20260929/predictions.csv
+ai_prototype/artifacts/v23_survival_time_correction_20260929/split_manifest.json
+ai_prototype/artifacts/v23_survival_time_correction_20260929/freeze_before.json
+ai_prototype/artifacts/v23_survival_time_correction_20260929/manifest.json
+ai_prototype/artifacts/rq1_longitudinal_v2_phase1_corrected/raw_predictions.jsonl.gz
+ai_prototype/artifacts/rq1_longitudinal_v2_phase1_corrected/split_manifest.json
+ai_prototype/artifacts/rq1_longitudinal_v2_phase1_corrected/manifest.json

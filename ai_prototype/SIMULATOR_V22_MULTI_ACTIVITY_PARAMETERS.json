@@ -1,0 +1,88 @@
+{
+  "version": "v22-multi-activity-amendment-01",
+  "created": "2026-09-28",
+  "result_status_at_lock": "no v2.2 generated data or prediction result viewed",
+  "activities": ["LOADED_MARCH", "BODYWEIGHT_CIRCUIT"],
+  "final_seeds": [110, 220, 330, 440, 550],
+  "common": {
+    "capacity_center": {"low": 0.9, "base": 1.0, "high": 1.1},
+    "capacity_half_spread": {"low": 0.1, "base": 0.2, "high": 0.3},
+    "hr_gain_bpm": {"low": 60.0, "base": 80.0, "high": 100.0},
+    "response_sd_bpm": {"low": 5.0, "base": 10.0, "high": 15.0},
+    "physiology_sd_bpm": {"low": 3.0, "base": 5.0, "high": 8.0},
+    "measurement_sd_bpm": {"low": 2.0, "base": 4.0, "high": 6.0},
+    "tau_slow_hours": {"low": 12.0, "base": 24.0, "high": 48.0},
+    "lambda_debt": {"low": 0.3, "base": 0.5, "high": 0.7},
+    "occasion_error_sd_points": {"low": 0.4, "base": 0.8, "high": 1.2},
+    "personal_bias_sd_points": {"low": 0.3, "base": 0.5, "high": 0.8},
+    "tolerance_multiplier": {"low": 0.8, "base": 1.0, "high": 1.2},
+    "session_tolerance_log_sd": {"low": 0.05, "base": 0.15, "high": 0.3},
+    "strain_weights": [0.4, 0.25, 0.2, 0.15],
+    "fatigue_weights": [0.45, 0.25, 0.3],
+    "condition_weights": [0.35, 0.35, 0.3],
+    "recovery_multiplier_triangular": [0.75, 1.0, 1.25],
+    "pre_hr_debt_coefficient_bpm": 5.0,
+    "post_hr_strain_coefficient_bpm": 10.0,
+    "post_hr_debt_coefficient_bpm": 5.0,
+    "score_map": {"offset": 2.0, "scale": 6.0, "clip": [0.0, 10.0]}
+  },
+  "burden_coupling": {
+    "WEAK": [0.1, 0.1, 0.2, 0.15, 0.45],
+    "BASE": [0.2, 0.15, 0.25, 0.15, 0.25],
+    "STRONG": [0.3, 0.2, 0.25, 0.1, 0.15]
+  },
+  "loaded_march": {
+    "synthetic_display_body_mass_kg": 75.0,
+    "speed_bounds_kmh": [3.5, 5.5],
+    "load_ratio_upper": 0.4,
+    "uphill_grade_upper_pct": 5.0,
+    "reference_duration_min": 20.0,
+    "half_duration_min": 20.0,
+    "speed_load_interaction": {"low": 0.0, "base": 0.15, "high": 0.3},
+    "base_weights_speed_load_grade": [0.45, 0.35, 0.2],
+    "calibration": [
+      ["M01", 3.5, 0.2, 0.0, 6.0], ["M02", 4.5, 0.2, 0.0, 6.0],
+      ["M03", 5.5, 0.2, 0.0, 6.0], ["M04", 4.5, 0.0, 0.0, 6.0],
+      ["M05", 4.5, 0.4, 0.0, 6.0], ["M06", 4.5, 0.2, 5.0, 6.0],
+      ["M07", 3.5, 0.2, 0.0, 20.0], ["M08", 4.5, 0.2, 0.0, 20.0],
+      ["M09", 5.5, 0.2, 0.0, 20.0], ["M10", 5.5, 0.4, 0.0, 6.0],
+      ["M11", 4.5, 0.4, 5.0, 6.0], ["M12", 3.5, 0.4, 5.0, 20.0]
+    ],
+    "evaluation": [
+      ["ME1", 4.0, 0.2, 0.0, 12.0], ["ME2", 5.0, 0.2, 0.0, 12.0],
+      ["ME3", 4.5, 0.3, 5.0, 12.0], ["ME4", 5.5, 0.4, 5.0, 20.0]
+    ]
+  },
+  "bodyweight_circuit": {
+    "stations": ["station_1", "station_2", "station_3", "station_4", "station_5", "station_6"],
+    "work_density_weights": {
+      "LOW": [0.35, 0.3, 0.35],
+      "BASE": [0.5, 0.25, 0.25],
+      "HIGH": [0.65, 0.2, 0.15]
+    },
+    "work_reference_sec": 30.0,
+    "duration_reference_min": 14.0,
+    "half_duration_min": 14.0,
+    "calibration": [
+      ["C01", 10, 10, 7, null], ["C02", 20, 20, 7, null],
+      ["C03", 30, 30, 7, null], ["C04", 30, 5, 7, null],
+      ["C05", 10, 10, 14, null], ["C06", 20, 20, 14, null],
+      ["C07", 30, 30, 14, null], ["C08", 30, 5, 14, null],
+      ["C09", 20, 20, 14, 5], ["C10", 20, 20, 14, 15],
+      ["C11", 20, 20, 14, 60], ["C12", 20, 20, 14, 1440]
+    ],
+    "evaluation": [
+      ["CE1", 15, 15, 7], ["CE2", 25, 25, 14],
+      ["CE3", 30, 10, 7], ["CE4", 30, 10, 14]
+    ]
+  },
+  "provenance": {
+    "grid": "literature-bounded simulation sensitivity grid; not a safe human protocol",
+    "coupling_and_noise": "SIMULATION_ASSUMPTION",
+    "sensor_error": "SIMULATION_ASSUMPTION; not a device specification",
+    "population_claim": false,
+    "default_gap_hours": 72.0,
+    "block_order": "sha256 subject parity; M-C if even, C-M if odd",
+    "evaluation_order": "paired ME/CE; pair order reversed for odd subject parity"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "status": "EVALUATION_SUPPORT_PREREGISTERED_NOT_RUN",
+  "created": "2026-09-28",
+  "amendment_sha256": "7174341076eb72bec02e7466f86931bb2d6d03f0d9f0bf42e098cc92e90ab7f5",
+  "v23_protocol_freeze_sha256": "d613ec7453f10b1263b6add995fdabbe125bd91436db4e307e5f446533f7369a",
+  "v23_generator_sha256": "ad1c5813943a777fdb09c889c979791a7f6ca4c3e345c867b9dfb853b0b36154",
+  "v23_initial_validation_sha256": "9d62c735dee1b3729137719bc34cbda71c0c3583e58abb4b5ab2828c21a92b25",
+  "v22_phase1_sha256": "2111a1027052620122d17d4138a6e32d94acfb29d15c4349a2a797d94463f085"
+}

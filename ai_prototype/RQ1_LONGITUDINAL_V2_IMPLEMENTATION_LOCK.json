@@ -1,0 +1,44 @@
+{
+  "lock_id": "rq1-longitudinal-v2-implementation-01",
+  "created_at": "2026-10-01",
+  "status": "IMPLEMENTATION_LOCKED_BEFORE_DRY_RUN",
+  "scope": "v2-minimal generator inputs and code; no prediction experiment result viewed",
+  "files": [
+    {
+      "path": "RQ1_LONGITUDINAL_V2_PROTOCOL.md",
+      "bytes": 9128,
+      "sha256": "d284231eddf3ae2a02657b3f4c08092b61febb69be04b6937d11bd4b59fa6b7a"
+    },
+    {
+      "path": "RQ1_LONGITUDINAL_V2_FINAL_PARAMETERS.json",
+      "bytes": 7145,
+      "sha256": "af3338011e41e44d2c466cbc5fcbcba4822de79a858ced04e2b212040509e200"
+    },
+    {
+      "path": "RQ1_LONGITUDINAL_V2_PARAMETERS_AMENDMENT_01.md",
+      "bytes": 5472,
+      "sha256": "4fd58a6f89a96557f1202999af193580d46569c62edb68ac8a804da78a7e4a43"
+    },
+    {
+      "path": "RQ1_LONGITUDINAL_V2_PARAMETERS_AMENDMENT_02.md",
+      "bytes": 3352,
+      "sha256": "88f416fdca72887f67264bb5cd750b9c6e9ea7dcdfb452186fd085b3f01c6708"
+    },
+    {
+      "path": "RQ1_LONGITUDINAL_V2_FINAL_LOCK.json",
+      "bytes": 1766,
+      "sha256": "56201c5b04c08ba5e0393f333ff2b8814048ae91f75e5ad58b6498c6d607f012"
+    },
+    {
+      "path": "artifacts/rq1_longitudinal_v2_calibration/calibration.json",
+      "bytes": 20162,
+      "sha256": "8f416deee564d7450a5a7083922ec61b9a78a41c74fa96107df6ff19be11044d"
+    },
+    {
+      "path": "simulator_rq1_longitudinal_v2.py",
+      "bytes": 17357,
+      "sha256": "26db4dd3848260809cb79fa9e17df74022d7c815aad3856a278cda8f7cc379d0"
+    }
+  ],
+  "no_post_result_parameter_change": true
+}

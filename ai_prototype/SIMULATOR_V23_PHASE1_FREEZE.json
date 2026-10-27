@@ -1,0 +1,9 @@
+{
+  "status": "PHASE1_PREREGISTERED_NOT_RUN",
+  "created": "2026-09-28",
+  "phase1_protocol_sha256": "65d2577d6ae28b73c0d26af900e307f36c0766dc62ee46d1ad3e0172b9090eae",
+  "v23_parameter_freeze_sha256": "d613ec7453f10b1263b6add995fdabbe125bd91436db4e307e5f446533f7369a",
+  "evaluation_support_freeze_sha256": "c044f0bd77b3a83223bad89c0f237550765a6dacda8c550299edacaf66c928ea",
+  "v23_generator_sha256": "ad1c5813943a777fdb09c889c979791a7f6ca4c3e345c867b9dfb853b0b36154",
+  "evaluation_support_validation_sha256": "1e96d46401993f5c4cbacbf1957f11f2a96770aeaa334c92800bbe85ea694abe"
+}

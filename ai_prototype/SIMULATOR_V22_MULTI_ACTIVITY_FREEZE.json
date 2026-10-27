@@ -1,0 +1,29 @@
+{
+  "status": "GENERATOR_DRY_RUN_COMPLETE",
+  "created": "2026-09-28",
+  "v22_files": {
+    "SIMULATOR_V22_MULTI_ACTIVITY_DESIGN.md": "2d22367a51225912370644dd3976d2baa11f72226ff24df91f9174f10affbdb9",
+    "SIMULATOR_V22_MULTI_ACTIVITY_PROTOCOL.md": "1f649ad9ab3891d799420ef2ca96794194bd73e99557762db53b9a2012299c11",
+    "SIMULATOR_V22_MULTI_ACTIVITY_PARAMETER_REGISTER.md": "e5a368b1e42f755b9aeb9a3e50db1af67c34342c1863fcb42f9315f28026efa2",
+    "SIMULATOR_V22_MULTI_ACTIVITY_AMENDMENT_01.md": "1a00063cecd259d0210f013a57a6ed6b763761a7b2b283e4f0b9af240f02d2e5",
+    "SIMULATOR_V22_MULTI_ACTIVITY_AMENDMENT_02.md": "0b16a50c6742c2c01ca10af511876ee7efad7da4577db8a3abbbbba4d6c851e2",
+    "SIMULATOR_V22_MULTI_ACTIVITY_AMENDMENT_03.md": "ae16de7c5a046efb66c4df1df9de003cd7c85e7aa8e5000c60baa6fb19bd66af",
+    "SIMULATOR_V22_MULTI_ACTIVITY_AMENDMENT_04.md": "b31428726eeab2224dcda7787f8640ae16690efa8d9837f9b33ec2a3abe1104c",
+    "SIMULATOR_V22_MULTI_ACTIVITY_PARAMETERS.json": "3c5ca26d0787d744155e3ff3507325437da2140f819e41faa1f2575628ecce42",
+    "multi_activity_schema.py": "0ab987301905622d99cbcf0e9c9365a3cb8c4bff0a8dcdc5737fb2a622753c68",
+    "test_multi_activity_schema.py": "0440b3186f0fe6b601a263cae43b564139d3194c2e1844c6b0c824e3ca78be37",
+    "validate_v22_parameters.py": "175c28c6d8174061f12aab20e8cd04a91f62983a6c6abf630c5f0566731f1fd2",
+    "audit_v22_multi_activity_support.py": "8764f8c0d963a29ecafab91a400aaed1893bf9c5bb4c0bfccdc21ebc72e21942",
+    "artifacts/v22_multi_activity_support_audit/support_audit.json": "bb99a9cfef206ab8bc2c0dc1c7f2e13a3ca11dec329015fd4996ce24df403ac8",
+    "simulator_v22_multi_activity.py": "0c01193fe46db5b499a19b07741ff5a952a7794a90a9ece56b75088e68b7e178",
+    "validate_simulator_v22_multi_activity.py": "77389268360d16aba8572417a29c591a25266cee3bdd8b96bb9aa814d3e727a9",
+    "artifacts/synthetic_v22_multi_activity_dryrun/validation.json": "293c4c2bc202318900370383c0b04b9b1548e749200913578eba2138290b65a4",
+    "artifacts/synthetic_v22_multi_activity_dryrun/artifact_manifest.json": "046d1cf2190639637c4826bd253bd1ba007a8dbd45c92432e455d98b86163ee6"
+  },
+  "preserved_v21_files": {
+    "SIMULATOR_V21_RUNNING_PROTOCOL.md": "4594babf1e5cef0fc69a2879d7bb5b0a374bfde4abefd1661f4de9fb87aba129",
+    "SIMULATOR_V21_RUNNING_PARAMETERS.md": "be7eed3eae78a3a2e56fa3e07ee7101afa5780ba753b13bde0ba28f07bb99823",
+    "SIMULATOR_V21_RUNNING_PARAMETERS_AMENDMENT_01.md": "1e135e799dd3b776838b78b26b160fdc43d380878287899b99d8fd345cf21540",
+    "simulator_v21_running.py": "d03b854edb53fa95955d440c58c71bf3e7a158c3104753841f073a20046cf586"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "lock_id": "rq1-longitudinal-v2-final-parameters-01",
+  "created_at": "2026-10-01",
+  "status": "PARAMETERS_LOCKED_IMPLEMENTATION_PASS",
+  "scope": "design, calibration, and final parameter freeze; no v2 generator or experiment executed",
+  "files": [
+    {
+      "path": "RQ1_LONGITUDINAL_V2_PROTOCOL.md",
+      "bytes": 9128,
+      "sha256": "d284231eddf3ae2a02657b3f4c08092b61febb69be04b6937d11bd4b59fa6b7a"
+    },
+    {
+      "path": "RQ1_LONGITUDINAL_V2_PARAMETERS.json",
+      "bytes": 2807,
+      "sha256": "1d051725bd909343951c7d6c17d20fb5c94a45246c752b86a7ad25d758c61c17"
+    },
+    {
+      "path": "RQ1_LONGITUDINAL_V2_PARAMETERS_AMENDMENT_01.md",
+      "bytes": 5472,
+      "sha256": "4fd58a6f89a96557f1202999af193580d46569c62edb68ac8a804da78a7e4a43"
+    },
+    {
+      "path": "RQ1_LONGITUDINAL_V2_FINAL_PARAMETERS.json",
+      "bytes": 7145,
+      "sha256": "af3338011e41e44d2c466cbc5fcbcba4822de79a858ced04e2b212040509e200"
+    },
+    {
+      "path": "RQ1_LONGITUDINAL_V2_PARAMETER_EVIDENCE.md",
+      "bytes": 4341,
+      "sha256": "2611a51b407ed89fc5477de544aa8ed67f26c538ea677ff5cf3c0d92aa250b81"
+    },
+    {
+      "path": "artifacts/rq1_longitudinal_v2_calibration/calibration.json",
+      "bytes": 20162,
+      "sha256": "8f416deee564d7450a5a7083922ec61b9a78a41c74fa96107df6ff19be11044d"
+    },
+    {
+      "path": "scripts/calibrate_rq1_longitudinal_v2.py",
+      "bytes": 11212,
+      "sha256": "114d91ace76566cff3116554535c0c2e0712a3dfa465909b7ab6180fbccc92a8"
+    }
+  ],
+  "frozen_rules": [
+    "no post-result parameter adjustment",
+    "all critical sensitivity families reported",
+    "unknown population/device quantities remain unclaimed"
+  ],
+  "previous_v1_results_modified": false
+}

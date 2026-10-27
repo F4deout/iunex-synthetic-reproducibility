@@ -1,0 +1,8 @@
+{
+  "status": "METHOD_FIX_PREREGISTERED_NOT_RUN",
+  "created": "2026-09-28",
+  "amendment_sha256": "9d5587526be72a93403d586726bbaf8ab4238c8f80ee2785ae205324c37cc4a8",
+  "phase1_results_freeze_sha256": "0ec4a3e1ac1839047e8a595a7ff2be71baa927b6ecdafd3f43cb41f84634157f",
+  "phase1_results_sha256": "b26e1a2acc06c37797ceeb8ee4aec42b8419951fe7f580a1a1790e9c70ccbf9e",
+  "generator_sha256": "ad1c5813943a777fdb09c889c979791a7f6ca4c3e345c867b9dfb853b0b36154"
+}

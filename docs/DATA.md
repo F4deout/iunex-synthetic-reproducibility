@@ -25,3 +25,8 @@ python tools/stage_local_inputs.py --source /absolute/path/to/original/ai_protot
 - 원자료·별도 역사적 lock 산출물 전체를 자동 수집하는 도구는 아닙니다.
 
 없는 보정값을 임의로 만들거나 군 장병의 모집단 값으로 간주하지 않습니다. `python tools/verify_release.py --check-inputs`는 추가 입력 준비 상태를 별도로 표시합니다.
+
+
+## v1.1.0 추가 안내
+
+v1.1.0에서도 원자료·개별 예측값·개인/세션 배정표를 제외합니다. 추가 입력 제한은 [v1.1.0 추가 자료 안내](SUPPLEMENT_v1.1.0.md)를 참조하세요.

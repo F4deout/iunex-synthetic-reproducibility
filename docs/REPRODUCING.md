@@ -47,3 +47,8 @@ requirements는 준비 시 확인한 로컬 수치 환경의 버전입니다. �
 ## 이번 배포에서 수행한 검증
 
 원본 hash, Python syntax compilation, JSON parsing, 문서/데이터 제외 확인, 일부 논문 수치 대조를 수행합니다. 대규모 실험, 재학습, parameter 조정, 실제 장병/장비 검증은 하지 않습니다.
+
+
+## v1.1.0 추가 안내
+
+추가 두 실험의 코드·입력 요구사항·실행 제한은 [v1.1.0 추가 자료 안내](SUPPLEMENT_v1.1.0.md)에 구분했습니다. 무결성 확인은 `python tools/verify_supplement.py`로 별도 수행하며 새 학습은 실행하지 않습니다.

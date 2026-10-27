@@ -1,0 +1,56 @@
+{
+  "version": "rq1-longitudinal-v2-preregistered",
+  "status": "DESIGN_ONLY",
+  "seeds": [110, 220, 330, 440, 550],
+  "subjects": {"total": 120, "train": 72, "validation": 24, "test": 24},
+  "target_evaluation_events_per_subject": 30,
+  "history_lengths": [0, 5, 10, 20, 30, 50, 75, 100],
+  "observation_interval_days": {
+    "LOW": {"values": [1, 2, 3], "probabilities": [0.6, 0.3, 0.1]},
+    "BASE": {"values": [1, 3, 7], "probabilities": [0.4, 0.4, 0.2]},
+    "HIGH": {"values": [1, 7, 14], "probabilities": [0.3, 0.4, 0.3]},
+    "provenance": "SIMULATION_ASSUMPTION",
+    "critical": true
+  },
+  "capacity_dynamics_per_30_days": {
+    "LOW": {"continuous_change_sd": 0.01, "event_probability": 0.03, "event_magnitude_sd": 0.03},
+    "BASE": {"continuous_change_sd": 0.02, "event_probability": 0.07, "event_magnitude_sd": 0.06},
+    "HIGH": {"continuous_change_sd": 0.04, "event_probability": 0.15, "event_magnitude_sd": 0.10},
+    "provenance": "SIMULATION_ASSUMPTION",
+    "critical": true
+  },
+  "reporting_process": {
+    "LOW": {"stable_bias_sd": 0.30, "drift_sd_per_30_days": 0.03, "shift_probability_per_30_days": 0.03, "shift_sd": 0.25, "session_noise_sd": 0.20},
+    "BASE": {"stable_bias_sd": 0.55, "drift_sd_per_30_days": 0.07, "shift_probability_per_30_days": 0.08, "shift_sd": 0.50, "session_noise_sd": 0.35},
+    "HIGH": {"stable_bias_sd": 0.80, "drift_sd_per_30_days": 0.12, "shift_probability_per_30_days": 0.15, "shift_sd": 0.80, "session_noise_sd": 0.60},
+    "provenance": "SIMULATION_ASSUMPTION",
+    "critical": true
+  },
+  "history_recency": {
+    "calendar_windows_days": [30, 90],
+    "ewma_half_life_days": 30,
+    "provenance": "METHOD_CHOICE",
+    "critical": true
+  },
+  "ridge_alphas": [1.0, 10.0, 100.0],
+  "plateau_absolute_mae_threshold": 0.02,
+  "measurement_process": {
+    "source": "RQ1_STATE_MIXTURE_PARAMETERS.json",
+    "status": "existing simulation assumptions; no automatic inheritance until implementation crosswalk is frozen"
+  },
+  "activity_mix": {
+    "categories": ["NONE", "AEROBIC", "LOADED_MOVEMENT", "BODYWEIGHT_CIRCUIT"],
+    "exact_probabilities": "UNKNOWN_NEEDS_FREEZE_BEFORE_IMPLEMENTATION",
+    "external_demand_distribution": "UNKNOWN_NEEDS_FREEZE_BEFORE_IMPLEMENTATION",
+    "duration_distribution_minutes": "UNKNOWN_NEEDS_FREEZE_BEFORE_IMPLEMENTATION",
+    "recovery_interval_distribution_minutes": "UNKNOWN_NEEDS_FREEZE_BEFORE_IMPLEMENTATION"
+  },
+  "unresolved_before_implementation": [
+    "activity category probabilities",
+    "activity-specific external demand and duration distributions",
+    "activity-specific capacity response coefficients",
+    "environmental context distribution",
+    "mapping from latent state to noiseless subjective targets",
+    "measurement-parameter crosswalk from the frozen state-mixture generator"
+  ]
+}

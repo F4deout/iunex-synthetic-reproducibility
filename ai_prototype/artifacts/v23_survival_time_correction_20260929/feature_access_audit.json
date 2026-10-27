@@ -1,0 +1,32 @@
+[
+  {
+    "seed": 110,
+    "all_history_prior": "PASS",
+    "latent_removed_features_unchanged": "PASS",
+    "target_and_current_outcome_perturbed_features_unchanged": "PASS"
+  },
+  {
+    "seed": 220,
+    "all_history_prior": "PASS",
+    "latent_removed_features_unchanged": "PASS",
+    "target_and_current_outcome_perturbed_features_unchanged": "PASS"
+  },
+  {
+    "seed": 330,
+    "all_history_prior": "PASS",
+    "latent_removed_features_unchanged": "PASS",
+    "target_and_current_outcome_perturbed_features_unchanged": "PASS"
+  },
+  {
+    "seed": 440,
+    "all_history_prior": "PASS",
+    "latent_removed_features_unchanged": "PASS",
+    "target_and_current_outcome_perturbed_features_unchanged": "PASS"
+  },
+  {
+    "seed": 550,
+    "all_history_prior": "PASS",
+    "latent_removed_features_unchanged": "PASS",
+    "target_and_current_outcome_perturbed_features_unchanged": "PASS"
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "status": "METHOD_VALIDATED",
+  "created": "2026-09-28",
+  "method_freeze_sha256": "ce020fb5c191544286bf6e0abc9f89ed0bdffb04fbcb62aa821e1518a5e3af2c",
+  "analysis_sha256": "28222bcac95ea1cd64e7e862e8842db904ae3f522a55c1a3c93b7930036de546",
+  "summary_sha256": "bcffea49d8ceaff6cc5e5659ba8d0fe7d4240a6d6912fe1ccff72e374566103a",
+  "artifacts": {
+    "results.json": "1e4d6599b408b612af71a54ba690d7a83618bff7b9ca99c326ca6c212de91bd8",
+    "predictions.csv": "e3b8e83fc3c60fa7ac00d2cb0cf3774910ba3256c4299f291dedf6443b94b185",
+    "REPORT.md": "8d2e4894247b5da22c8af98902dd06891315ab029283404b0090b6dc54b78ee3",
+    "manifest.json": "8736d28d0802ec5c93f0047cf87392043ef8523d83edadab1e27a951b48542c9"
+  },
+  "old_phase1_results_sha256": "b26e1a2acc06c37797ceeb8ee4aec42b8419951fe7f580a1a1790e9c70ccbf9e"
+}
